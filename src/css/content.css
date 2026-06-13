@@ -1,0 +1,87 @@
+.content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    color: black;
+}
+
+.center {
+    min-width: 500px;
+}
+
+.title h1 {
+    font-size: 55px;
+}
+
+.title h2 {
+    font-size: 40px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.links a {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.46);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.links a img {
+    width: 75px;
+    height: 75px;
+    transition: opacity 0.25s ease;
+}
+
+.links a span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.25s ease;
+    color: black;
+}
+
+.links a:hover {
+    transition: box-shadow 0.3s;
+    -webkit-box-shadow: 5px 5px 25px 5px #B5B5B5; 
+    box-shadow: 5px 5px 25px 5px #B5B5B5;
+}
+
+.links a:hover img {
+    opacity: 0;
+}
+
+.links a:hover span {
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .links {
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
