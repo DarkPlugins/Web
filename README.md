@@ -1,3 +1,3 @@
-### Just my Website
+## Just my Website
 
 [Visit!](https://darkplugins.de/)
