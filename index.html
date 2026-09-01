@@ -1,50 +1,86 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>DarkPlugins</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="I'm DarkPlugins, a Software Engineer">
-        <meta name="keywords" content="DarkPlugins, Software Engineer, Minecraft Plugins">
-        <link rel="shortcut icon" type="image/x-icon" href="src/img/icons/favicon.ico">
-        <link rel="icon" type="image/png" href="src/img/icons/favicon.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="src/img/icons/favicon.png" sizes="96x96">
-        <link rel="apple-touch-icon" sizes="180x180" href="src/img/icons/apple-touch-icon.png">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="src/img/icons/mstile-144x144.png">
-        <link rel="stylesheet" href="./src/css/style.css">
-        <link rel="stylesheet" href="./src/css/sky.css">
-        <link rel="stylesheet" href="./src/css/content.css">
-        <link rel="stylesheet" href="./src/css/foooter.css">
-        <script src="src/js/sky.js" defer></script>
-    </head>
-<body>
-    <div class="sky" id="sky"></div>
-    <div class="content">
-        <div class="center">
-            <div class="title">
-                <h1>DarkPlugins</h1>
-                <h2>Software Engineer</h2>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Startseite neu laden">
+        <img src="src/img/logo.png" alt="Logo">
+      </a>
+      <details class="menu">
+        <summary aria-label="Menü öffnen"><span></span><span></span></summary>
+        <nav aria-label="Hauptnavigation">
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#projekte">Projekte</a>
+          <a href="#alle-projekte">Alle Projekte</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </details>
+    </header>
+    <section class="page page-home" id="start">
+      <h1 class="page-title">DarkPlugins</h1>
+      <main class="gallery" aria-label="Bildergalerie">
+        <img class="picture" src="src/img/pfi/01.png" alt="">
+        <img class="picture" src="src/img/pfi/02.png" alt="">
+        <img class="picture" src="src/img/pfi/03.png" alt="">
+        <img class="picture" src="src/img/pfi/04.png" alt="">
+        <img class="picture" src="src/img/pfi/05.png" alt="">
+        <img class="picture" src="src/img/pfi/06.png" alt="">
+        <img class="picture" src="src/img/pfi/07.png" alt="">
+      </main>
+      <p class="page-subtitle">Software Engineer</p>
+    </section>
+    <section class="page page-projects" id="projekte" aria-label="Projekte">
+      <div class="projects-content">
+        <p class="section-label">Ausgewählte Arbeiten</p>
+        <h2>Neuste Projekte</h2>
+        <div class="project-grid">
+          <a class="project-card" href="#projekt-eins">
+            <img src="src/img/projects/featured_1.png" alt="Vorschau des ersten Projekts">
+            <div class="project-card__content">
+              <h3>Creative Systems</h3>
+              <span class="project-card__cta">Jetzt anschauen</span>
             </div>
-            <div class="links">
-                <a href="https://github.com/DarkPlugins" target="_blank">
-                    <img src="./src/img/icons/links/github.png" alt="github">
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank">
-                    <img src="./src/img/icons/links/spigotmc.png" alt="github">
-                    <span>SpigotMc</span>
-                </a>
-                <a href="mailto:contact@darkplugins.de">
-                    <img src="./src/img/icons/links/email.png" alt="email">
-                    <span>Email</span>
-                </a>
+          </a>
+          <a class="project-card" href="#projekt-zwei">
+            <img src="src/img/projects/featured_2.png" alt="Vorschau des zweiten Projekts">
+            <div class="project-card__content">
+              <h3>Digital Playground</h3>
+              <span class="project-card__cta">Jetzt anschauen</span>
             </div>
+          </a>
         </div>
-    </div>
-    <footer>
-        <p>Made with ❤️ by DarkPlugins</p>
-    </footer>
-</body>
+      </div>
+    </section>
+    <section class="page page-all-projects" id="alle-projekte" aria-label="Alle Projekte">
+      <div class="all-projects-content">
+        <p class="section-label">Entdecke mehr</p>
+        <h2>Alle Projekte</h2>
+        <div class="category-grid">
+          <a class="category-card category-github" href="https://github.com/" target="_blank" rel="noreferrer">
+            <img src="src/img/projects/bg_github.png" alt="GitHub Projekte">
+            <span>GitHub</span>
+            <small>Code &amp; Open Source</small>
+          </a>
+          <a class="category-card category-spigot" href="https://www.spigotmc.org/" target="_blank" rel="noreferrer">
+            <img src="src/img/projects/bg_spigotmc.png" alt="SpigotMC Projekte">
+            <span>SpigotMC</span>
+            <small>Minecraft Plugins</small>
+          </a>
+          <a class="category-card category-labs" href="#labs">
+            <img src="src/img/projects/bg_labs.png" alt="Labs Projekte">
+            <span>Labs</span>
+            <small>Experimente &amp; Ideen</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
