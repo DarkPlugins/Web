@@ -3,27 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio von DarkPlugins: Software, Plugins und Web-Projekte.">
+    <title>DarkPlugins · Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="logo" href="index.html" aria-label="Startseite neu laden">
-        <img src="src/img/logo.png" alt="Logo">
+      <a class="logo" href="#start" aria-label="Zur Startseite">
+        <img src="src/img/logo.png" alt="DarkPlugins Logo">
       </a>
       <details class="menu">
         <summary aria-label="Menü öffnen"><span></span><span></span></summary>
         <nav aria-label="Hauptnavigation">
           <a href="#ueber-mich">Über mich</a>
           <a href="#projekte">Projekte</a>
-          <a href="#alle-projekte">Alle Projekte</a>
+          <div class="menu-projects">
+            <div class="menu-projects__head">
+              <a href="projects.html">Alle Projekte</a>
+              <button type="button" aria-label="Projektliste öffnen" aria-expanded="false" data-project-nav-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg>
+              </button>
+            </div>
+            <div class="menu-projects__list" data-project-nav-list hidden></div>
+          </div>
           <a href="#kontakt">Kontakt</a>
         </nav>
       </details>
     </header>
+
     <section class="page page-home" id="start">
       <h1 class="page-title">DarkPlugins</h1>
       <main class="gallery" aria-label="Bildergalerie">
@@ -37,28 +48,76 @@
       </main>
       <p class="page-subtitle">Software Engineer</p>
     </section>
+
+    <section class="page page-about" id="ueber-mich" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-profile panel">
+          <span class="profile-mark" aria-hidden="true">DP</span>
+          <div>
+            <p class="section-label">Über mich</p>
+            <h2 id="about-title">Code mit klarem Zweck.</h2>
+          </div>
+        </div>
+
+        <div class="skills-panel panel">
+          <p class="section-label">Skills</p>
+          <div class="skill-grid" aria-label="Technologien">
+            <svg class="skill-icon" role="img" aria-label="C Sharp" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="44">C#</text></svg>
+            <svg class="skill-icon" role="img" aria-label=".NET" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">.NET</text></svg>
+            <svg class="skill-icon" role="img" aria-label="Java" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">JAVA</text></svg>
+            <svg class="skill-icon" role="img" aria-label="JavaScript" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="44">JS</text></svg>
+            <svg class="skill-icon" role="img" aria-label="HTML" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">HTML</text></svg>
+            <svg class="skill-icon" role="img" aria-label="CSS" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">CSS</text></svg>
+            <svg class="skill-icon" role="img" aria-label="Git" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">GIT</text></svg>
+            <svg class="skill-icon" role="img" aria-label="Docker" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">DKR</text></svg>
+            <svg class="skill-icon" role="img" aria-label="Linux" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">LNX</text></svg>
+            <svg class="skill-icon" role="img" aria-label="MySQL" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">SQL</text></svg>
+            <svg class="skill-icon" role="img" aria-label="REST APIs" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">API</text></svg>
+            <svg class="skill-icon" role="img" aria-label="Spigot" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">SPG</text></svg>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p>Ich entwickle Software, Plugins und Web-Anwendungen. Besonders gern arbeite ich an Systemen, bei denen eine saubere Struktur im Alltag einen echten Unterschied macht.</p>
+          <p>Mein Schwerpunkt liegt auf C#, Java und Backend-Logik. Dazu kommen Web-Technologien, Datenbanken und die Werkzeuge, die ein Projekt zuverlässig vom ersten Commit bis zum Betrieb bringen.</p>
+          <p>Guter Code muss für mich nicht clever wirken. Er soll verständlich bleiben, Fehler sichtbar machen und sich ohne Umwege erweitern lassen.</p>
+        </div>
+
+        <aside class="work-panel panel" aria-label="Arbeitsweise">
+          <p class="section-label">Arbeitsweise</p>
+          <h3>Einfach bauen. Sauber prüfen.</h3>
+          <ul>
+            <li><span>01</span> Kleine, getrennte Module</li>
+            <li><span>02</span> Lesbare Schnittstellen</li>
+            <li><span>03</span> Tests für kritische Logik</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
     <section class="page page-projects" id="projekte" aria-label="Projekte">
       <div class="projects-content">
         <p class="section-label">Ausgewählte Arbeiten</p>
         <h2>Neuste Projekte</h2>
         <div class="project-grid">
-          <a class="project-card" href="#projekt-eins">
-            <img src="src/img/projects/featured_1.png" alt="Vorschau des ersten Projekts">
+          <a class="project-card" href="projects.html#portfolio-system">
+            <img src="src/img/projects/featured_1.png" alt="Vorschau von Portfolio System">
             <div class="project-card__content">
-              <h3>Creative Systems</h3>
+              <h3>Portfolio System</h3>
               <span class="project-card__cta">Jetzt anschauen</span>
             </div>
           </a>
-          <a class="project-card" href="#projekt-zwei">
-            <img src="src/img/projects/featured_2.png" alt="Vorschau des zweiten Projekts">
+          <a class="project-card" href="projects.html#service-monitor">
+            <img src="src/img/projects/featured_2.png" alt="Vorschau von Service Monitor">
             <div class="project-card__content">
-              <h3>Digital Playground</h3>
+              <h3>Service Monitor</h3>
               <span class="project-card__cta">Jetzt anschauen</span>
             </div>
           </a>
         </div>
       </div>
     </section>
+
     <section class="page page-all-projects" id="alle-projekte" aria-label="Alle Projekte">
       <div class="all-projects-content">
         <p class="section-label">Entdecke mehr</p>
@@ -74,13 +133,39 @@
             <span>SpigotMC</span>
             <small>Minecraft Plugins</small>
           </a>
-          <a class="category-card category-labs" href="#labs">
-            <img src="src/img/projects/bg_labs.png" alt="Labs Projekte">
-            <span>Labs</span>
-            <small>Experimente &amp; Ideen</small>
+          <a class="category-card category-all-projects" href="projects.html">
+            <img src="src/img/projects/bg_labs.png" alt="Alle Projekte ansehen">
+            <span>Alle Projekte</span>
+            <small>Komplette Übersicht</small>
           </a>
         </div>
       </div>
     </section>
+
+    <section class="page page-contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-content">
+        <p class="section-label">Kontakt</p>
+        <h2 id="contact-title">Lass uns schreiben.</h2>
+        <a class="contact-mail" href="mailto:contact@darkplugins.de">contact@darkplugins.de</a>
+        <div class="contact-links" aria-label="Direkte Links">
+          <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub öffnen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.spigotmc.org/" target="_blank" rel="noreferrer" aria-label="SpigotMC öffnen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v5H9v3h8v5H9v5H5V3Zm4 5h6V6H9v2Zm0 8h4v-2H9v2Z"/></svg>
+            <span>SpigotMC</span>
+          </a>
+          <a href="mailto:contact@darkplugins.de" aria-label="E-Mail schreiben">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm9 7 7-5H5l7 5Zm0 2.5L5 9.7V17h14V9.7l-7 4.8Z"/></svg>
+            <span>E-Mail</span>
+          </a>
+        </div>
+        <p class="contact-note">Für Projektanfragen, Plugins oder einen technischen Austausch erreichst du mich am schnellsten per E-Mail.</p>
+      </div>
+    </section>
+
+    <script src="src/js/project-data.js"></script>
+    <script src="src/js/index.js"></script>
   </body>
 </html>

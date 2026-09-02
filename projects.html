@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de" class="projects-document">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alle Projekte von DarkPlugins nach Themen sortiert.">
+    <title>Alle Projekte · DarkPlugins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/style.css">
+  </head>
+  <body class="projects-page">
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Zur Startseite">
+        <img src="src/img/logo.png" alt="DarkPlugins Logo">
+      </a>
+      <details class="menu">
+        <summary aria-label="Menü öffnen"><span></span><span></span></summary>
+        <nav aria-label="Hauptnavigation">
+          <a href="index.html#ueber-mich">Über mich</a>
+          <a href="index.html#projekte">Projekte</a>
+          <a href="#start">Alle Projekte</a>
+          <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+      </details>
+    </header>
+
+    <main class="projects-index" id="start">
+      <header class="projects-index__intro">
+        <p class="section-label">Archiv</p>
+        <h1>Alle Projekte</h1>
+        <p>Neun Projekte in drei Themen. Weitere Arbeiten können sich nahtlos an die bestehenden Reihen anschließen.</p>
+      </header>
+      <div class="project-groups" data-project-groups></div>
+    </main>
+
+    <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-project-modal hidden>
+      <button class="modal-close" type="button" aria-label="Projekt schließen" data-modal-close>
+        <span></span><span></span>
+      </button>
+      <div class="project-modal__visual">
+        <img src="src/img/projects/featured_1.png" alt="" data-modal-image>
+      </div>
+      <div class="project-modal__content">
+        <p class="section-label" data-modal-theme></p>
+        <h2 id="modal-title" data-modal-title></h2>
+        <p class="project-modal__lead" data-modal-description></p>
+        <p data-modal-details></p>
+        <dl>
+          <div><dt>Jahr</dt><dd data-modal-year></dd></div>
+          <div><dt>Skills</dt><dd><ul data-modal-skills></ul></dd></div>
+        </dl>
+        <a class="modal-link" href="https://github.com/" target="_blank" rel="noreferrer" data-modal-link>Projekt öffnen</a>
+      </div>
+    </section>
+
+    <script src="src/js/project-data.js"></script>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/projects.js"></script>
+  </body>
+</html>
