@@ -1,5 +1,9 @@
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
+const isHomePage = !document.body.classList.contains("projects-page");
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+const isReload = navigationEntry?.type === "reload" || performance.navigation?.type === 1;
+
 const scrollToHash = (behavior = "auto") => {
   const id = decodeURIComponent(window.location.hash.slice(1));
   if (!id) return;
@@ -10,8 +14,24 @@ const scrollToHash = (behavior = "auto") => {
   target.scrollIntoView({ behavior, block: "start", inline: "nearest" });
 };
 
+const resetHomePosition = () => {
+  if (!isHomePage || !isReload) return;
+
+  if (window.location.hash && window.location.hash !== "#home") {
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}#home`);
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+};
+
+resetHomePosition();
+
 window.addEventListener("hashchange", () => scrollToHash("smooth"));
 window.addEventListener("load", () => {
+  if (isReload) {
+    resetHomePosition();
+    return;
+  }
+
   window.setTimeout(() => scrollToHash("auto"), 0);
 }, { once: true });
 

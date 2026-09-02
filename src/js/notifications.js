@@ -83,7 +83,7 @@
 
       if (copied) {
         playCopySound();
-        showNotification(window.i18n?.t("notification.copied", "Copied to clipboard") ?? "Copied to clipboard");
+        showNotification(window.translations?.t("notification.copied", "Copied to clipboard") ?? "Copied to clipboard");
       }
     });
   });

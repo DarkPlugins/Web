@@ -74,7 +74,7 @@
       archive: {
         label: "Archive",
         heading: "All projects",
-        intro: "Projects from browser development, Minecraft plugins, and hardware prototypes — not everything is visible on GitHub.",
+        intro: "Projects from browser development, Minecraft plugins, and hardware prototypes. Not everything is visible on GitHub.",
         theme: "Theme",
         slideAria: "Projects {number}",
         projectImageAlt: "Placeholder image for {title}",
@@ -102,6 +102,9 @@
       },
       notification: {
         copied: "Copied to clipboard"
+      },
+      preloader: {
+        loading: "Loading page"
       }
     },
     de: {
@@ -175,7 +178,7 @@
       archive: {
         label: "Archiv",
         heading: "Alle Projekte",
-        intro: "Projekte aus Browser-Entwicklung, Minecraft-Plugins und Hardware-Prototypen – nicht alles ist auf GitHub einsehbar.",
+        intro: "Projekte aus Browser-Entwicklung, Minecraft-Plugins und Hardware-Prototypen. Nicht alles ist auf GitHub einsehbar.",
         theme: "Thema",
         slideAria: "Projekte {number}",
         projectImageAlt: "Platzhalterbild für {title}",
@@ -203,6 +206,9 @@
       },
       notification: {
         copied: "In die Zwischenablage kopiert"
+      },
+      preloader: {
+        loading: "Seite wird geladen"
       },
       skill: {
         "Browser Extension": "Browser-Erweiterung",
@@ -352,7 +358,7 @@
     "Tools & Analysis": "toolsAnalysis"
   }[theme]);
 
-  window.i18n = {
+  window.translations = {
     get language() {
       return currentLanguage;
     },

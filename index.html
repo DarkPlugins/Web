@@ -10,9 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/preloader.css">
     <link rel="stylesheet" href="src/css/notifications.css">
   </head>
-  <body>
+  <body class="is-loading">
+    <div class="preloader" data-preloader role="status" data-i18n-aria-label="preloader.loading" aria-label="Loading page">
+      <img class="preloader__logo" src="src/img/logo128.png" alt="DarkPlugins">
+    </div>
     <header class="site-header">
       <a class="logo" href="#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
         <img src="src/img/logo.png" alt="DarkPlugins Logo">
@@ -60,7 +64,7 @@
     <section class="page page-about" id="about" data-i18n-aria-label="about.sectionAria" aria-labelledby="about-heading">
       <div class="about-grid">
         <div class="about-copy">
-          <img class="about-logo" src="src/img/logo.png" alt="DarkPlugins Logo">
+          <img class="about-logo" src="src/img/logo128.png" alt="DarkPlugins Logo">
           <p class="section-label" data-i18n="about.label">About me</p>
           <h2 id="about-heading" data-i18n="about.heading">Code with a clear purpose.</h2>
           <p data-i18n="about.paragraph1">I build, test, and publish personal software projects — from browser extensions and small web tools to Minecraft plugins and Raspberry Pi prototypes.</p>
@@ -98,14 +102,14 @@
         <h2 data-i18n="projects.heading">Selected projects</h2>
         <div class="project-grid">
           <a class="project-card project-card--grs" href="projects.html#grs-v1">
-            <img src="src/img/pfi/original.png" data-i18n-alt="projects.grsAlt" alt="GamesRadioStation preview">
+            <img src="src/img/projects/grs/vl_01.png" data-i18n-alt="projects.grsAlt" alt="GamesRadioStation preview">
             <div class="project-card__content">
               <h3>GamesRadioStation</h3>
               <span class="project-card__cta" data-i18n="projects.view">View project</span>
             </div>
           </a>
           <a class="project-card project-card--ttv" href="projects.html#ttvnotifyme">
-            <img src="src/img/pfi/original.png" data-i18n-alt="projects.ttvAlt" alt="TTVNotifyMe preview">
+            <img src="src/img/projects/ttvnotifyme/bel_01.png" data-i18n-alt="projects.ttvAlt" alt="TTVNotifyMe preview">
             <div class="project-card__content">
               <h3>TTVNotifyMe</h3>
               <span class="project-card__cta" data-i18n="projects.view">View project</span>
@@ -168,7 +172,8 @@
     </div>
 
     <script src="src/js/project-data.js"></script>
-    <script src="src/js/i18n.js"></script>
+    <script src="src/js/preloader.js"></script>
+    <script src="src/js/translations.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/notifications.js"></script>
   </body>

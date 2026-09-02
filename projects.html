@@ -10,9 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/preloader.css">
     <link rel="stylesheet" href="src/css/notifications.css">
   </head>
-  <body class="projects-page">
+  <body class="projects-page is-loading">
+    <div class="preloader" data-preloader role="status" data-i18n-aria-label="preloader.loading" aria-label="Loading page">
+      <img class="preloader__logo" src="src/img/logo128.png" alt="DarkPlugins">
+    </div>
     <header class="site-header">
       <a class="logo" href="index.html#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
         <img src="src/img/logo.png" alt="DarkPlugins Logo">
@@ -76,7 +80,8 @@
     </section>
 
     <script src="src/js/project-data.js"></script>
-    <script src="src/js/i18n.js"></script>
+    <script src="src/js/preloader.js"></script>
+    <script src="src/js/translations.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/projects.js"></script>
     <script src="src/js/notifications.js"></script>

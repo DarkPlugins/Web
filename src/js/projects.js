@@ -15,16 +15,16 @@ const groups = window.PROJECTS.reduce((result, project) => {
 const themeGroups = Array.from(groups.entries());
 let activeProject = null;
 
-const translate = (key, fallback, variables) => window.i18n?.t(key, fallback, variables) ?? fallback;
-const projectText = (project, field) => window.i18n?.projectText(project, field) ?? project[field];
-const projectSkills = (project) => window.i18n?.projectSkills(project) ?? project.skills;
-const translatedTheme = (theme) => window.i18n?.themeText(theme) ?? theme;
+const translate = (key, fallback, variables) => window.translations?.t(key, fallback, variables) ?? fallback;
+const projectText = (project, field) => window.translations?.projectText(project, field) ?? project[field];
+const projectSkills = (project) => window.translations?.projectSkills(project) ?? project.skills;
+const translatedTheme = (theme) => window.translations?.themeText(theme) ?? theme;
 
 const statusMarkup = (project) => {
   const statuses = project.statuses ?? [{ key: project.status, className: project.statusClass }];
   return statuses.map((status) => {
     const fallback = status.label ?? status.key ?? status.className;
-    const label = window.i18n?.statusText(status.key, fallback) ?? fallback;
+    const label = window.translations?.statusText(status.key, fallback) ?? fallback;
     return `<span class="project-status project-status--${status.className}"><span class="project-status__dot" aria-hidden="true"></span>${label}</span>`;
   }).join("");
 };
@@ -39,7 +39,7 @@ const createProjectGroup = ([theme, projects]) => {
     const card = document.createElement("article");
     card.className = "project-tile";
     card.innerHTML = `
-      <img src="src/img/pfi/original.png" alt="${translate("archive.projectImageAlt", "Placeholder image for {title}", { title: project.title })}">
+      <img src="${project.image}" alt="${translate("archive.projectImageAlt", "Placeholder image for {title}", { title: project.title })}">
       <div class="project-tile__badges">
         ${statusMarkup(project)}
         ${project.sourcePrivate ? `<span class="project-privacy">${translate("archive.privateSource", "Source code private")}</span>` : ""}
@@ -104,7 +104,7 @@ function openProject(project) {
   modalSpigot.hidden = !project.spigotHref;
   if (project.spigotHref) modalSpigot.href = project.spigotHref;
   modalSourceNote.hidden = project.sourceAvailable !== false;
-  modal.querySelector("[data-modal-image]").src = "src/img/pfi/original.png";
+  modal.querySelector("[data-modal-image]").src = project.image;
   modal.querySelector("[data-modal-image]").alt = translate("archive.projectImageAlt", "Placeholder image for {title}", { title: project.title });
   modal.dataset.theme = project.theme;
   modal.hidden = false;
