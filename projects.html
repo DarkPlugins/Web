@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="de" class="projects-document">
+<html lang="en" class="projects-document">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Alle Projekte von DarkPlugins nach Themen sortiert.">
-    <title>Alle Projekte · DarkPlugins</title>
+    <meta name="description" content="" data-i18n-content="meta.projectsDescription">
+    <title data-i18n="meta.projectsTitle">All projects · DarkPlugins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,33 +14,40 @@
   </head>
   <body class="projects-page">
     <header class="site-header">
-      <a class="logo" href="index.html" aria-label="Zur Startseite">
+      <a class="logo" href="index.html#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
         <img src="src/img/logo.png" alt="DarkPlugins Logo">
       </a>
       <details class="menu">
-        <summary aria-label="Menü öffnen"><span></span><span></span></summary>
-        <nav aria-label="Hauptnavigation">
-          <a href="index.html#ueber-mich">Über mich</a>
-          <a href="index.html#projekte">Projekte</a>
-          <a href="#start">Alle Projekte</a>
-          <a href="index.html#kontakt">Kontakt</a>
+        <summary data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span></span><span></span></summary>
+        <nav data-i18n-aria-label="nav.main" aria-label="Main navigation">
+          <div class="language-switcher">
+            <label for="language-select" data-i18n="language.label">Language</label>
+            <select id="language-select" data-language-select>
+              <option value="en" data-i18n="language.english">English</option>
+              <option value="de" data-i18n="language.german">German</option>
+            </select>
+          </div>
+          <a href="index.html#about" data-i18n="nav.about">About</a>
+          <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#home" data-i18n="nav.allProjects">All Projects</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
         </nav>
       </details>
     </header>
 
-    <main class="projects-index" id="start">
+    <main class="projects-index" id="home">
       <section class="project-slide project-slide--overview" aria-labelledby="projects-title">
         <header class="projects-index__intro">
-          <p class="section-label">Archiv</p>
-          <h1 id="projects-title">Alle Projekte</h1>
-          <p>Projekte aus Browser-Entwicklung, Minecraft-Plugins und Hardware-Prototypen – nicht alles ist auf GitHub einsehbar.</p>
+          <p class="section-label" data-i18n="archive.label">Archive</p>
+          <h1 id="projects-title" data-i18n="archive.heading">All projects</h1>
+          <p data-i18n="archive.intro">Projects from browser development, Minecraft plugins, and hardware prototypes — not everything is visible on GitHub.</p>
         </header>
         <div class="project-slide__groups project-groups" data-project-groups></div>
       </section>
     </main>
 
     <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-project-modal hidden>
-      <button class="modal-close" type="button" aria-label="Projekt schließen" data-modal-close>
+      <button class="modal-close" type="button" data-i18n-aria-label="archive.closeModal" aria-label="Close project" data-modal-close>
         <span></span><span></span>
       </button>
       <div class="project-modal__visual">
@@ -48,27 +55,28 @@
       </div>
       <div class="project-modal__content">
         <p class="section-label" data-modal-theme></p>
-        <div class="modal-project-status" aria-label="Projektstatus">
+        <div class="modal-project-status" data-i18n-aria-label="archive.statusAria" aria-label="Project status">
           <div class="modal-project-status__items" data-modal-status></div>
-          <span class="project-privacy" data-modal-private hidden>Sourcecode private</span>
+          <span class="project-privacy" data-modal-private data-i18n="archive.privateSource" hidden>Source code private</span>
         </div>
         <h2 id="modal-title" data-modal-title></h2>
         <p class="project-modal__lead" data-modal-description></p>
         <p data-modal-details></p>
         <dl>
-          <div><dt>Jahr</dt><dd data-modal-year></dd></div>
-          <div><dt>Technologien</dt><dd><ul data-modal-skills></ul></dd></div>
+          <div><dt data-i18n="archive.year">Year</dt><dd data-modal-year></dd></div>
+          <div><dt data-i18n="archive.technologies">Technologies</dt><dd><ul data-modal-skills></ul></dd></div>
         </dl>
         <div class="modal-actions">
-          <a class="modal-link" href="https://github.com/" target="_blank" rel="noreferrer" data-modal-link>Projekt ansehen</a>
-          <a class="modal-download" href="src/img/pfi/original.png" download="original.png" data-modal-download>Herunterladen</a>
-          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noreferrer" data-modal-spigot hidden>Spigot Download</a>
-          <span class="modal-source-note" data-modal-source-note hidden>Sourcecode nicht verfügbar</span>
+          <a class="modal-link" href="https://github.com/" target="_blank" rel="noreferrer" data-i18n="archive.viewProject" data-modal-link>View project</a>
+          <a class="modal-download" href="src/img/pfi/original.png" download="original.png" data-i18n="archive.download" data-modal-download>Download</a>
+          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noreferrer" data-i18n="archive.spigotDownload" data-modal-spigot hidden>Spigot download</a>
+          <span class="modal-source-note" data-modal-source-note data-i18n="archive.sourceUnavailable" hidden>Source code unavailable</span>
         </div>
       </div>
     </section>
 
     <script src="src/js/project-data.js"></script>
+    <script src="src/js/i18n.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/projects.js"></script>
     <script src="src/js/notifications.js"></script>

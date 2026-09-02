@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio von DarkPlugins: Software, Plugins und Web-Projekte.">
-    <title>DarkPlugins · Portfolio</title>
+    <meta name="description" content="" data-i18n-content="meta.homeDescription">
+    <title data-i18n="meta.homeTitle">DarkPlugins · Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,31 +14,38 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="logo" href="#start" aria-label="Zur Startseite">
+      <a class="logo" href="#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
         <img src="src/img/logo.png" alt="DarkPlugins Logo">
       </a>
       <details class="menu">
-        <summary aria-label="Menü öffnen"><span></span><span></span></summary>
-        <nav aria-label="Hauptnavigation">
-          <a href="#ueber-mich">Über mich</a>
-          <a href="#projekte">Projekte</a>
+        <summary data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span></span><span></span></summary>
+        <nav data-i18n-aria-label="nav.main" aria-label="Main navigation">
+          <div class="language-switcher">
+            <label for="language-select" data-i18n="language.label">Language</label>
+            <select id="language-select" data-language-select>
+              <option value="en" data-i18n="language.english">English</option>
+              <option value="de" data-i18n="language.german">German</option>
+            </select>
+          </div>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
           <div class="menu-projects">
             <div class="menu-projects__head">
-              <a href="projects.html">Alle Projekte</a>
-              <button type="button" aria-label="Projektliste öffnen" aria-expanded="false" data-project-nav-toggle>
+              <a href="projects.html" data-i18n="nav.allProjects">All Projects</a>
+              <button type="button" data-i18n-aria-label="nav.openProjectList" aria-label="Open project list" aria-expanded="false" data-project-nav-toggle>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg>
               </button>
             </div>
             <div class="menu-projects__list" data-project-nav-list hidden></div>
           </div>
-          <a href="#kontakt">Kontakt</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
       </details>
     </header>
 
-    <section class="page page-home" id="start">
+    <section class="page page-home" id="home">
       <h1 class="page-title">DarkPlugins</h1>
-      <main class="gallery" aria-label="Bildergalerie">
+      <main class="gallery" data-i18n-aria-label="home.galleryAria" aria-label="Portfolio gallery">
         <img class="picture" src="src/img/pfi/01.png" alt="">
         <img class="picture" src="src/img/pfi/02.png" alt="">
         <img class="picture" src="src/img/pfi/03.png" alt="">
@@ -47,120 +54,121 @@
         <img class="picture" src="src/img/pfi/06.png" alt="">
         <img class="picture" src="src/img/pfi/07.png" alt="">
       </main>
-      <p class="page-subtitle">Software Engineer</p>
+      <p class="page-subtitle" data-i18n="home.role">Software Engineer</p>
     </section>
 
-    <section class="page page-about" id="ueber-mich" aria-labelledby="about-title">
+    <section class="page page-about" id="about" data-i18n-aria-label="about.sectionAria" aria-labelledby="about-heading">
       <div class="about-grid">
         <div class="about-copy">
           <img class="about-logo" src="src/img/logo.png" alt="DarkPlugins Logo">
-          <p class="section-label">Über mich</p>
-          <h2 id="about-title">Code mit klarem Zweck.</h2>
-          <p>Ich baue, teste und veröffentliche persönliche Softwareprojekte – von Browser-Erweiterungen und kleinen Web-Tools bis zu Minecraft-Plugins und Raspberry-Pi-Prototypen.</p>
-          <p>Auf GitHub entstehen daraus praktische Werkzeuge wie CR-Toolkit und TTVNotifyMe, aber auch Experimente wie die Game Radio Station. Jedes Projekt ist eine Gelegenheit, eine Idee greifbar zu machen und dabei etwas Neues zu lernen.</p>
-          <p>Mein Schwerpunkt liegt auf JavaScript, Node.js, Python und Java – immer mit Blick auf klare Bedienung, funktionierende Systeme und Lösungen, die im Alltag wirklich helfen.</p>
+          <p class="section-label" data-i18n="about.label">About me</p>
+          <h2 id="about-heading" data-i18n="about.heading">Code with a clear purpose.</h2>
+          <p data-i18n="about.paragraph1">I build, test, and publish personal software projects — from browser extensions and small web tools to Minecraft plugins and Raspberry Pi prototypes.</p>
+          <p data-i18n="about.paragraph2">On GitHub, these become useful tools such as CR-Toolkit and TTVNotifyMe, as well as experiments like the Game Radio Station. Every project is a chance to make an idea tangible and learn something new along the way.</p>
+          <p data-i18n="about.paragraph3">My focus is JavaScript, Node.js, Python, and Java — always with an eye for clear interfaces, working systems, and solutions that help in everyday use.</p>
         </div>
 
         <div class="skills-panel">
-          <p class="section-label">Skills</p>
-          <div class="skill-grid" aria-label="Technologien">
+          <p class="section-label" data-i18n="about.skills">Skills</p>
+          <div class="skill-grid" data-i18n-aria-label="about.technologiesAria" aria-label="Technologies">
             <span class="skill-item" tabindex="0" aria-label="C Sharp"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 7.2 14.4l-1.6-1.2A7 7 0 1 1 12 5c1.5 0 2.9.5 4 1.3V4.1A9 9 0 0 0 12 3Zm-5 8h5v2H7v-2Zm7 0h5v2h-5v-2Z"/></svg><span class="skill-tooltip">C#</span></span>
             <span class="skill-item" tabindex="0" aria-label="C Plus Plus"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.2-6.5l-1.4 1.4A7 7 0 1 0 18.2 17l1.4 1.4A9 9 0 0 1 3 12Zm13-1h2V9h2v2h2v2h-2v2h-2v-2h-2v-2Zm-7 0h2V9h2v2h2v2h-2v2h-2v-2H9v-2Z"/></svg><span class="skill-tooltip">C++</span></span>
             <span class="skill-item" tabindex="0" aria-label="Java"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6c3 2 1 3-1 4 5 0 8-2 6-5 4 4 1 7-4 8 7 1 9 3 9 5H6c0-2 2-3 5-4-5 0-8-3-3-8Zm-2 14h12v1H6v-1Z"/></svg><span class="skill-tooltip">Java</span></span>
             <span class="skill-item" tabindex="0" aria-label="JavaScript"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm3 3v7.5c0 2 1 3 3 3 1.8 0 2.8-1 2.8-3V7h-2v7.3c0 .8-.3 1.2-.9 1.2-.6 0-.9-.4-.9-1.2V7H7Zm9 0c-1.8 0-3 1-3 2.6 0 1.5.8 2.3 2.5 3 1 .4 1.3.7 1.3 1.2 0 .5-.4.8-1 .8-.8 0-1.4-.3-2-.8v2.1c.6.4 1.3.6 2.1.6 1.9 0 3.1-1 3.1-2.7 0-1.5-.8-2.4-2.6-3-.9-.4-1.2-.7-1.2-1.1 0-.4.3-.7.9-.7.6 0 1.2.2 1.8.6V7.4c-.5-.3-1.1-.4-1.9-.4Z"/></svg><span class="skill-tooltip">JavaScript</span></span>
             <span class="skill-item" tabindex="0" aria-label="Python"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.3 0-4 1.8-4 3.4V9h4v2H6.5C4.6 11 3 12.7 3 15s1.6 4 3.5 4H8v-3H6.8c-.7 0-1.3-.5-1.3-1.2s.6-1.2 1.3-1.2H12c2.1 0 4-1.7 4-4V6.4C16 4.2 14.2 3 12 3Zm-1.5 2h3v2h-3V5Zm1.5 16c3.3 0 4-1.8 4-3.4V15h-4v-2h5.5c1.9 0 3.5-1.7 3.5-4s-1.6-4-3.5-4H16v3h1.2c.7 0 1.3.5 1.3 1.2s-.6 1.2-1.3 1.2H12c-2.1 0-4 1.7-4 4v3.4c0 2.2 1.8 3.4 4 3.4Zm1.5-2h-3v-2h3v2Z"/></svg><span class="skill-tooltip">Python</span></span>
             <span class="skill-item" tabindex="0" aria-label="Node.js"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8.7 5v10L12 22l-8.7-5V7L12 2Zm0 2.3L5.3 8.2v7.6l6.7 3.9 6.7-3.9V8.2L12 4.3Zm-1.1 4h2.2v6.3c0 .9-.5 1.4-1.4 1.4-.7 0-1.3-.3-1.8-.8l-1.2 1.3c.8.8 1.8 1.3 3.1 1.3 2 0 3.3-1.2 3.3-3.1V8.3h-2.2v4.4c0 .6-.3.9-.8.9-.4 0-.7-.2-1-.5l-1.2 1.2c.5.5 1.1.8 1.8.8.7 0 1.3-.2 1.7-.6"/></svg><span class="skill-tooltip">Node.js</span></span>
-            <span class="skill-item" tabindex="0" aria-label="HTML und CSS"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 1.5 17L12 22l6.5-2.1L20 3H4Zm12.9 4H7.1l.2 2h9.4l-.3 3H7.6l.2 2h6.4l-.3 3.8-2 .6-2-.6-.1-1.8H8l.2 3.1 3.8 1.2 3.8-1.2L17 7h-.1Z"/></svg><span class="skill-tooltip">HTML / CSS</span></span>
+            <span class="skill-item" tabindex="0" aria-label="HTML and CSS"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 1.5 17L12 22l6.5-2.1L20 3H4Zm12.9 4H7.1l.2 2h9.4l-.3 3H7.6l.2 2h6.4l-.3 3.8-2 .6-2-.6-.1-1.8H8l.2 3.1 3.8 1.2 3.8-1.2L17 7h-.1Z"/></svg><span class="skill-tooltip">HTML / CSS</span></span>
             <span class="skill-item" tabindex="0" aria-label="Apache2"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.7 0-6.5 3.1-6.5 7.2 0 2.1.8 4 2.1 5.4L4 20h3l2-2.8c.9.4 1.9.6 3 .6s2.1-.2 3-.6L17 20h3l-3.6-4.4c1.3-1.4 2.1-3.3 2.1-5.4C18.5 6.1 15.7 3 12 3Zm-3 6h2v2H9V9Zm4 0h2v2h-2V9Zm-4.5 5.2c1 .6 2.2.9 3.5.9s2.5-.3 3.5-.9c-.7 1-1.8 1.6-3.5 1.6s-2.8-.6-3.5-1.6Z"/></svg><span class="skill-tooltip">Apache2</span></span>
             <span class="skill-item" tabindex="0" aria-label="Docker"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h3V7h3v3h3V7h3v3h3v2H3v1c0 2.8 2.2 5 5 5h7c2.1 0 3.8-1.2 4.6-3 .8.2 1.6.2 2.4-.1-.7 2.8-3.2 5.1-6.3 5.1H8a7 7 0 0 1-7-7v-1h2V10Z"/></svg><span class="skill-tooltip">Docker</span></span>
             <span class="skill-item" tabindex="0" aria-label="Linux"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-2.1 0-3 2.2-3 4.5 0 1.4-.6 2.8-1.4 4.1C6.6 13 5 14.5 5 17c0 2.2 1.8 3 4 3 .9 0 1.9-.3 3-.3s2.1.3 3 .3c2.2 0 4-.8 4-3 0-2.5-1.6-4-2.6-5.4C15.6 10.3 15 8.9 15 7.5 15 5.2 14.1 3 12 3Zm-3 12c.7 0 1.2.5 1.2 1.2S9.7 17.4 9 17.4s-1.2-.5-1.2-1.2S8.3 15 9 15Zm6 0c.7 0 1.2.5 1.2 1.2s-.5 1.2-1.2 1.2-1.2-.5-1.2-1.2S14.3 15 15 15Z"/></svg><span class="skill-tooltip">Linux</span></span>
           </div>
         </div>
 
-        <aside class="work-panel" aria-label="Arbeitsweise">
-          <p class="section-label">Arbeitsweise</p>
-          <h3>Ruhig planen. Klar umsetzen.</h3>
-          <p class="work-panel__text">Von Browser-Erweiterungen wie CR-Toolkit über Minecraft-Plugins bis zum Raspberry-Pi-Prototypen GRS-v1: Ich probiere Ideen praktisch aus, verbinde Software mit echter Hardware und bringe Projekte Schritt für Schritt in eine nutzbare Form.</p>
+        <aside class="work-panel" data-i18n-aria-label="about.workAria" aria-label="Work style">
+          <p class="section-label" data-i18n="about.workLabel">Work style</p>
+          <h3 data-i18n="about.workHeading">Plan calmly. Build clearly.</h3>
+          <p class="work-panel__text" data-i18n="about.workText">From browser extensions such as CR-Toolkit and Minecraft plugins to the Raspberry Pi prototype GRS-v1: I test ideas in practice, connect software with real hardware, and shape projects into useful tools step by step.</p>
         </aside>
       </div>
     </section>
 
-    <section class="page page-projects" id="projekte" aria-label="Projekte">
+    <section class="page page-projects" id="projects" data-i18n-aria-label="projects.sectionAria" aria-label="Projects">
       <div class="projects-content">
-        <p class="section-label">GitHub-Projekte</p>
-        <h2>Ausgewählte Projekte</h2>
+        <p class="section-label" data-i18n="projects.label">GitHub projects</p>
+        <h2 data-i18n="projects.heading">Selected projects</h2>
         <div class="project-grid">
           <a class="project-card project-card--grs" href="projects.html#grs-v1">
-            <img src="src/img/pfi/original.png" alt="Vorschau von GamesRadioStation">
+            <img src="src/img/pfi/original.png" data-i18n-alt="projects.grsAlt" alt="GamesRadioStation preview">
             <div class="project-card__content">
               <h3>GamesRadioStation</h3>
-              <span class="project-card__cta">Jetzt anschauen</span>
+              <span class="project-card__cta" data-i18n="projects.view">View project</span>
             </div>
           </a>
           <a class="project-card project-card--ttv" href="projects.html#ttvnotifyme">
-            <img src="src/img/pfi/original.png" alt="Vorschau von TTVNotifyMe">
+            <img src="src/img/pfi/original.png" data-i18n-alt="projects.ttvAlt" alt="TTVNotifyMe preview">
             <div class="project-card__content">
               <h3>TTVNotifyMe</h3>
-              <span class="project-card__cta">Jetzt anschauen</span>
+              <span class="project-card__cta" data-i18n="projects.view">View project</span>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="page page-all-projects" id="alle-projekte" aria-label="Alle Projekte">
+    <section class="page page-all-projects" id="all-projects" data-i18n-aria-label="projects.allSectionAria" aria-label="All projects">
       <div class="all-projects-content">
-        <p class="section-label">Entdecke mehr</p>
-        <h2>Alle Projekte</h2>
+        <p class="section-label" data-i18n="projects.discover">Discover more</p>
+        <h2 data-i18n="projects.allHeading">All projects</h2>
         <div class="category-grid">
           <a class="category-card category-github" href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer">
-            <img src="src/img/projects/bg_github.png" alt="GitHub Projekte">
+            <img src="src/img/projects/bg_github.png" data-i18n-alt="projects.githubAlt" alt="GitHub projects">
             <span>GitHub</span>
-            <small>Code &amp; Open Source</small>
+            <small data-i18n="projects.githubSmall">Code &amp; open source</small>
           </a>
           <a class="category-card category-spigot" href="https://www.spigotmc.org/" target="_blank" rel="noreferrer">
-            <img src="src/img/projects/bg_spigotmc.png" alt="SpigotMC Projekte">
+            <img src="src/img/projects/bg_spigotmc.png" data-i18n-alt="projects.spigotAlt" alt="SpigotMC projects">
             <span>SpigotMC</span>
-            <small>Minecraft Plugins</small>
+            <small data-i18n="projects.spigotSmall">Minecraft plugins</small>
           </a>
           <a class="category-card category-all-projects" href="projects.html">
-            <img src="src/img/projects/bg_labs.png" alt="Alle Projekte ansehen">
-            <span>Alle Projekte</span>
-            <small>Komplette Übersicht</small>
+            <img src="src/img/projects/bg_labs.png" data-i18n-alt="projects.allAlt" alt="View all projects">
+            <span data-i18n="projects.allHeading">All projects</span>
+            <small data-i18n="projects.allSmall">Complete overview</small>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="page page-contact" id="kontakt" aria-labelledby="contact-title">
+    <section class="page page-contact" id="contact" aria-labelledby="contact-heading">
       <div class="contact-content">
-        <p class="section-label">Kontakt</p>
-        <h2 id="contact-title">Lass uns schreiben.</h2>
-        <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" aria-label="E-Mail-Adresse kopieren">contact@darkplugins.de</a>
-        <div class="contact-links" aria-label="Direkte Links">
-          <a href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer" aria-label="GitHub öffnen">
+        <p class="section-label" data-i18n="contact.label">Contact</p>
+        <h2 id="contact-heading" data-i18n="contact.heading">Let's write.</h2>
+        <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" data-i18n-aria-label="contact.copyEmail" aria-label="Copy email address">contact@darkplugins.de</a>
+        <div class="contact-links" data-i18n-aria-label="contact.linksAria" aria-label="Direct links">
+          <a href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
             <span>GitHub</span>
           </a>
-          <a href="https://www.spigotmc.org/" target="_blank" rel="noreferrer" aria-label="SpigotMC öffnen">
+          <a href="https://www.spigotmc.org/" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v5H9v3h8v5H9v5H5V3Zm4 5h6V6H9v2Zm0 8h4v-2H9v2Z"/></svg>
             <span>SpigotMC</span>
           </a>
-          <a href="mailto:contact@darkplugins.de" aria-label="E-Mail schreiben">
+          <a href="mailto:contact@darkplugins.de" data-i18n-aria-label="contact.emailAria" aria-label="Write an email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm9 7 7-5H5l7 5Zm0 2.5L5 9.7V17h14V9.7l-7 4.8Z"/></svg>
-            <span>E-Mail</span>
+            <span data-i18n="contact.emailLabel">Email</span>
           </a>
         </div>
-        <p class="contact-note">Für Projektanfragen, Plugins oder einen technischen Austausch erreichst du mich am schnellsten per E-Mail.</p>
+        <p class="contact-note" data-i18n="contact.note">For project requests, plugins, or a technical exchange, email is the fastest way to reach me.</p>
       </div>
     </section>
 
     <div class="copy-notification" data-copy-notification role="status" aria-live="polite" hidden>
       <span class="copy-notification__check" aria-hidden="true">✓</span>
-      <span data-copy-notification-message>In Zwischenablage kopiert</span>
+      <span data-copy-notification-message data-i18n="notification.copied">Copied to clipboard</span>
     </div>
 
     <script src="src/js/project-data.js"></script>
+    <script src="src/js/i18n.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/notifications.js"></script>
   </body>

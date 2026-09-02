@@ -83,7 +83,7 @@
 
       if (copied) {
         playCopySound();
-        showNotification("In Zwischenablage kopiert");
+        showNotification(window.i18n?.t("notification.copied", "Copied to clipboard") ?? "Copied to clipboard");
       }
     });
   });

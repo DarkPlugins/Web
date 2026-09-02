@@ -142,6 +142,66 @@ body {
   outline: none;
 }
 
+.language-switcher {
+  display: grid;
+  width: min(100%, 240px);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.language-switcher label {
+  color: var(--color-text);
+  font-size: 1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.language-switcher select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-menu-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-hover);
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.language-switcher select:focus-visible {
+  border-color: var(--color-text-hover);
+  box-shadow: 0 0 12px var(--color-glow);
+  outline: none;
+}
+
+.language-switcher option {
+  background: var(--color-menu-surface);
+  color: var(--color-text-hover);
+}
+
+.menu nav > .language-switcher {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  width: auto;
+  top: max(clamp(16px, 3vw, 42px), env(safe-area-inset-top));
+  left: clamp(32px, 5vw, 96px);
+  gap: 12px;
+  margin: 0;
+}
+
+.menu nav > .language-switcher label {
+  flex: 0 0 auto;
+  font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+}
+
+.menu nav > .language-switcher select {
+  width: auto;
+  min-width: 132px;
+  padding: 11px 14px;
+  font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+}
+
 .menu-projects {
   display: grid;
   width: 100%;
@@ -1194,13 +1254,13 @@ body {
   --modal-color-end: var(--color-spigot-hover-end);
 }
 
-.project-modal[data-theme="Web & Erweiterungen"] {
+.project-modal[data-theme="Web & Extensions"] {
   --modal-color-start: var(--color-github-hover-start);
   --modal-color-end: var(--color-github-hover-end);
 }
 
-.project-modal[data-theme="Prototypen & Hardware"],
-.project-modal[data-theme="Tools & Analyse"] {
+.project-modal[data-theme="Prototypes & Hardware"],
+.project-modal[data-theme="Tools & Analysis"] {
   --modal-color-start: var(--color-labs-hover-start);
   --modal-color-end: var(--color-labs-hover-end);
 }
@@ -1391,6 +1451,9 @@ body {
 }
 
 .modal-project-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 7px;
   margin-top: 14px;
 }
@@ -1644,6 +1707,22 @@ body {
     align-content: start;
     max-width: none;
     padding: 20px 24px 22px;
+  }
+
+  .menu nav > .language-switcher {
+    top: max(20px, env(safe-area-inset-top));
+    left: 24px;
+    gap: 8px;
+  }
+
+  .menu nav > .language-switcher label,
+  .menu nav > .language-switcher select {
+    font-size: 1rem;
+  }
+
+  .menu nav > .language-switcher select {
+    min-width: 0;
+    padding: 9px 10px;
   }
 
   .project-modal__content h2 {
