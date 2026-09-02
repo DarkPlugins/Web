@@ -1,3 +1,20 @@
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+const scrollToHash = (behavior = "auto") => {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  if (!id) return;
+
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  target.scrollIntoView({ behavior, block: "start", inline: "nearest" });
+};
+
+window.addEventListener("hashchange", () => scrollToHash("smooth"));
+window.addEventListener("load", () => {
+  window.setTimeout(() => scrollToHash("auto"), 0);
+}, { once: true });
+
 const projectList = document.querySelector("[data-project-nav-list]");
 const projectToggle = document.querySelector("[data-project-nav-toggle]");
 

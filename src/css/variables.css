@@ -9,6 +9,7 @@
   --color-highlight: #e9ca7f;
   --color-highlight-hover: #ffe1a0;
   --color-card-mist: rgb(8 18 41 / 82%);
+  --color-modal-overlay: rgb(8 18 41 / 4%);
   --color-github-start: #f4cf72;
   --color-github-end: #e88c44;
   --color-spigot-start: #e96567;
@@ -22,6 +23,18 @@
   --color-labs-hover-start: #46f6aa;
   --color-labs-hover-end: #095b5e;
   --color-highlight-glow: rgb(233 202 127 / 45%);
+  --color-notification-start: #55e59b;
+  --color-notification-end: #159968;
+  --color-notification-text: #061b14;
+  --color-notification-border: rgb(255 255 255 / 28%);
+  --color-notification-shadow: rgb(21 153 104 / 34%);
+  --color-status-active: #5fe3a0;
+  --color-status-pre-release: #82b9ff;
+  --color-status-not-released: #c59aff;
+  --color-status-finished: #f0cd76;
+  --color-status-prototype: #d09aff;
+  --color-status-private: #f09aa9;
+  --color-status-surface: rgb(8 18 41 / 86%);
   --font-body: "Oswald", sans-serif;
   --font-menu: "Oswald", sans-serif;
 }

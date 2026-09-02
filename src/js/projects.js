@@ -1,4 +1,6 @@
 const projectRoot = document.querySelector("[data-project-groups]");
+const projectsIndex = document.querySelector(".projects-index");
+const firstSlide = projectRoot?.closest(".project-slide");
 const modal = document.querySelector("[data-project-modal]");
 const modalClose = document.querySelector("[data-modal-close]");
 const projectMap = new Map(window.PROJECTS.map((project) => [project.slug, project]));
@@ -10,40 +12,85 @@ const groups = window.PROJECTS.reduce((result, project) => {
   return result;
 }, new Map());
 
-groups.forEach((projects, theme) => {
+const themeGroups = Array.from(groups.entries());
+
+const statusMarkup = (project) => {
+  const statuses = project.statuses ?? [{ label: project.status, className: project.statusClass }];
+  return statuses.map((status) => `<span class="project-status project-status--${status.className}"><span class="project-status__dot" aria-hidden="true"></span>${status.label}</span>`).join("");
+};
+
+const createProjectGroup = ([theme, projects]) => {
   const section = document.createElement("section");
   section.className = "project-group";
-  section.innerHTML = `<p class="section-label">Thema</p><h2>${theme}</h2><div class="project-list"></div>`;
+  section.innerHTML = `<div class="project-group__heading"><p class="section-label">Thema</p><h2>${theme}</h2></div><div class="project-list"></div>`;
 
   const list = section.querySelector(".project-list");
   projects.forEach((project) => {
-    const link = document.createElement("a");
-    link.className = "project-tile";
-    link.href = `#${project.slug}`;
-    link.innerHTML = `
-      <img src="${project.image}" alt="Vorschau von ${project.title}">
-      <span class="project-tile__index">${String(window.PROJECTS.indexOf(project) + 1).padStart(2, "0")}</span>
-      <span class="project-tile__content">
+    const card = document.createElement("article");
+    card.className = "project-tile";
+    card.innerHTML = `
+      <img src="src/img/pfi/original.png" alt="Platzhalterbild für ${project.title}">
+      <div class="project-tile__badges">
+        ${statusMarkup(project)}
+        ${project.sourcePrivate ? '<span class="project-privacy">Sourcecode private</span>' : ""}
+      </div>
+      <div class="project-tile__content">
         <strong>${project.title}</strong>
         <small>${project.skills.join(" · ")}</small>
-        <span class="project-tile__cta">Erfahre mehr</span>
-      </span>`;
-    list.append(link);
+        <div class="project-tile__actions">
+          <a class="project-tile__button" href="#${project.slug}">Projekt ansehen</a>
+        </div>
+      </div>`;
+    list.append(card);
   });
 
-  projectRoot.append(section);
-});
+  return section;
+};
+
+for (let index = 0; index < themeGroups.length; index += 2) {
+  const slide = index === 0 ? firstSlide : document.createElement("section");
+  const slideGroups = index === 0 ? projectRoot : document.createElement("div");
+
+  if (index > 0) {
+    slide.className = "project-slide";
+    slide.setAttribute("aria-label", `Projekte ${Math.floor(index / 2) + 1}`);
+    slideGroups.className = "project-slide__groups project-groups";
+    slide.append(slideGroups);
+    projectsIndex.append(slide);
+  }
+
+  slideGroups.append(...themeGroups.slice(index, index + 2).map(createProjectGroup));
+}
 
 function openProject(project) {
+  const modalStatus = modal.querySelector("[data-modal-status]");
+  const modalPrivate = modal.querySelector("[data-modal-private]");
+  const modalLink = modal.querySelector("[data-modal-link]");
+  const modalDownload = modal.querySelector("[data-modal-download]");
+  const modalSpigot = modal.querySelector("[data-modal-spigot]");
+  const modalSourceNote = modal.querySelector("[data-modal-source-note]");
+
   modal.querySelector("[data-modal-theme]").textContent = project.theme;
+  modalStatus.innerHTML = statusMarkup(project);
+  modalPrivate.hidden = !project.sourcePrivate;
   modal.querySelector("[data-modal-title]").textContent = project.title;
   modal.querySelector("[data-modal-description]").textContent = project.description;
   modal.querySelector("[data-modal-details]").textContent = project.details;
   modal.querySelector("[data-modal-year]").textContent = project.year;
   modal.querySelector("[data-modal-skills]").innerHTML = project.skills.map((skill) => `<li>${skill}</li>`).join("");
-  modal.querySelector("[data-modal-link]").href = project.href;
-  modal.querySelector("[data-modal-image]").src = project.image;
-  modal.querySelector("[data-modal-image]").alt = `Vorschau von ${project.title}`;
+  modalLink.hidden = !project.href;
+  if (project.href) modalLink.href = project.href;
+  modalDownload.hidden = !project.download;
+  if (project.download) {
+    modalDownload.href = project.download;
+    modalDownload.download = `${project.slug}.zip`;
+  }
+  modalSpigot.hidden = !project.spigotHref;
+  if (project.spigotHref) modalSpigot.href = project.spigotHref;
+  modalSourceNote.hidden = project.sourceAvailable !== false;
+  modal.querySelector("[data-modal-image]").src = "src/img/pfi/original.png";
+  modal.querySelector("[data-modal-image]").alt = `Platzhalterbild für ${project.title}`;
+  modal.dataset.theme = project.theme;
   modal.hidden = false;
   document.body.classList.add("modal-open");
   modalClose.focus();

@@ -1,0 +1,44 @@
+.copy-notification {
+  display: flex;
+  position: fixed;
+  z-index: 80;
+  top: max(18px, env(safe-area-inset-top));
+  left: 50%;
+  align-items: center;
+  gap: 10px;
+  max-width: min(calc(100vw - 36px), 340px);
+  padding: 12px 16px 12px 12px;
+  border: 1px solid var(--color-notification-border);
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-notification-start), var(--color-notification-end));
+  box-shadow: 0 12px 28px var(--color-notification-shadow);
+  color: var(--color-notification-text);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  opacity: 0;
+  transform: translate(-50%, -16px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.copy-notification[hidden] {
+  display: none;
+}
+
+.copy-notification.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.copy-notification__check {
+  display: grid;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-notification-text);
+  color: var(--color-notification-start);
+  font-size: 1rem;
+  line-height: 1;
+}

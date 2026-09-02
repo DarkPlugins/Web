@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/notifications.css">
   </head>
   <body>
     <header class="site-header">
@@ -51,66 +52,55 @@
 
     <section class="page page-about" id="ueber-mich" aria-labelledby="about-title">
       <div class="about-grid">
-        <div class="about-profile panel">
-          <span class="profile-mark" aria-hidden="true">DP</span>
-          <div>
-            <p class="section-label">Über mich</p>
-            <h2 id="about-title">Code mit klarem Zweck.</h2>
-          </div>
+        <div class="about-copy">
+          <img class="about-logo" src="src/img/logo.png" alt="DarkPlugins Logo">
+          <p class="section-label">Über mich</p>
+          <h2 id="about-title">Code mit klarem Zweck.</h2>
+          <p>Ich baue, teste und veröffentliche persönliche Softwareprojekte – von Browser-Erweiterungen und kleinen Web-Tools bis zu Minecraft-Plugins und Raspberry-Pi-Prototypen.</p>
+          <p>Auf GitHub entstehen daraus praktische Werkzeuge wie CR-Toolkit und TTVNotifyMe, aber auch Experimente wie die Game Radio Station. Jedes Projekt ist eine Gelegenheit, eine Idee greifbar zu machen und dabei etwas Neues zu lernen.</p>
+          <p>Mein Schwerpunkt liegt auf JavaScript, Node.js, Python und Java – immer mit Blick auf klare Bedienung, funktionierende Systeme und Lösungen, die im Alltag wirklich helfen.</p>
         </div>
 
-        <div class="skills-panel panel">
+        <div class="skills-panel">
           <p class="section-label">Skills</p>
           <div class="skill-grid" aria-label="Technologien">
-            <svg class="skill-icon" role="img" aria-label="C Sharp" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="44">C#</text></svg>
-            <svg class="skill-icon" role="img" aria-label=".NET" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">.NET</text></svg>
-            <svg class="skill-icon" role="img" aria-label="Java" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">JAVA</text></svg>
-            <svg class="skill-icon" role="img" aria-label="JavaScript" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="44">JS</text></svg>
-            <svg class="skill-icon" role="img" aria-label="HTML" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">HTML</text></svg>
-            <svg class="skill-icon" role="img" aria-label="CSS" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">CSS</text></svg>
-            <svg class="skill-icon" role="img" aria-label="Git" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">GIT</text></svg>
-            <svg class="skill-icon" role="img" aria-label="Docker" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">DKR</text></svg>
-            <svg class="skill-icon" role="img" aria-label="Linux" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">LNX</text></svg>
-            <svg class="skill-icon" role="img" aria-label="MySQL" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">SQL</text></svg>
-            <svg class="skill-icon" role="img" aria-label="REST APIs" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">API</text></svg>
-            <svg class="skill-icon" role="img" aria-label="Spigot" viewBox="0 0 72 72"><rect x="2" y="2" width="68" height="68" rx="14"/><text x="36" y="43">SPG</text></svg>
+            <span class="skill-item" tabindex="0" aria-label="C Sharp"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 7.2 14.4l-1.6-1.2A7 7 0 1 1 12 5c1.5 0 2.9.5 4 1.3V4.1A9 9 0 0 0 12 3Zm-5 8h5v2H7v-2Zm7 0h5v2h-5v-2Z"/></svg><span class="skill-tooltip">C#</span></span>
+            <span class="skill-item" tabindex="0" aria-label="C Plus Plus"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.2-6.5l-1.4 1.4A7 7 0 1 0 18.2 17l1.4 1.4A9 9 0 0 1 3 12Zm13-1h2V9h2v2h2v2h-2v2h-2v-2h-2v-2Zm-7 0h2V9h2v2h2v2h-2v2h-2v-2H9v-2Z"/></svg><span class="skill-tooltip">C++</span></span>
+            <span class="skill-item" tabindex="0" aria-label="Java"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6c3 2 1 3-1 4 5 0 8-2 6-5 4 4 1 7-4 8 7 1 9 3 9 5H6c0-2 2-3 5-4-5 0-8-3-3-8Zm-2 14h12v1H6v-1Z"/></svg><span class="skill-tooltip">Java</span></span>
+            <span class="skill-item" tabindex="0" aria-label="JavaScript"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm3 3v7.5c0 2 1 3 3 3 1.8 0 2.8-1 2.8-3V7h-2v7.3c0 .8-.3 1.2-.9 1.2-.6 0-.9-.4-.9-1.2V7H7Zm9 0c-1.8 0-3 1-3 2.6 0 1.5.8 2.3 2.5 3 1 .4 1.3.7 1.3 1.2 0 .5-.4.8-1 .8-.8 0-1.4-.3-2-.8v2.1c.6.4 1.3.6 2.1.6 1.9 0 3.1-1 3.1-2.7 0-1.5-.8-2.4-2.6-3-.9-.4-1.2-.7-1.2-1.1 0-.4.3-.7.9-.7.6 0 1.2.2 1.8.6V7.4c-.5-.3-1.1-.4-1.9-.4Z"/></svg><span class="skill-tooltip">JavaScript</span></span>
+            <span class="skill-item" tabindex="0" aria-label="Python"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.3 0-4 1.8-4 3.4V9h4v2H6.5C4.6 11 3 12.7 3 15s1.6 4 3.5 4H8v-3H6.8c-.7 0-1.3-.5-1.3-1.2s.6-1.2 1.3-1.2H12c2.1 0 4-1.7 4-4V6.4C16 4.2 14.2 3 12 3Zm-1.5 2h3v2h-3V5Zm1.5 16c3.3 0 4-1.8 4-3.4V15h-4v-2h5.5c1.9 0 3.5-1.7 3.5-4s-1.6-4-3.5-4H16v3h1.2c.7 0 1.3.5 1.3 1.2s-.6 1.2-1.3 1.2H12c-2.1 0-4 1.7-4 4v3.4c0 2.2 1.8 3.4 4 3.4Zm1.5-2h-3v-2h3v2Z"/></svg><span class="skill-tooltip">Python</span></span>
+            <span class="skill-item" tabindex="0" aria-label="Node.js"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8.7 5v10L12 22l-8.7-5V7L12 2Zm0 2.3L5.3 8.2v7.6l6.7 3.9 6.7-3.9V8.2L12 4.3Zm-1.1 4h2.2v6.3c0 .9-.5 1.4-1.4 1.4-.7 0-1.3-.3-1.8-.8l-1.2 1.3c.8.8 1.8 1.3 3.1 1.3 2 0 3.3-1.2 3.3-3.1V8.3h-2.2v4.4c0 .6-.3.9-.8.9-.4 0-.7-.2-1-.5l-1.2 1.2c.5.5 1.1.8 1.8.8.7 0 1.3-.2 1.7-.6"/></svg><span class="skill-tooltip">Node.js</span></span>
+            <span class="skill-item" tabindex="0" aria-label="HTML und CSS"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 1.5 17L12 22l6.5-2.1L20 3H4Zm12.9 4H7.1l.2 2h9.4l-.3 3H7.6l.2 2h6.4l-.3 3.8-2 .6-2-.6-.1-1.8H8l.2 3.1 3.8 1.2 3.8-1.2L17 7h-.1Z"/></svg><span class="skill-tooltip">HTML / CSS</span></span>
+            <span class="skill-item" tabindex="0" aria-label="Apache2"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.7 0-6.5 3.1-6.5 7.2 0 2.1.8 4 2.1 5.4L4 20h3l2-2.8c.9.4 1.9.6 3 .6s2.1-.2 3-.6L17 20h3l-3.6-4.4c1.3-1.4 2.1-3.3 2.1-5.4C18.5 6.1 15.7 3 12 3Zm-3 6h2v2H9V9Zm4 0h2v2h-2V9Zm-4.5 5.2c1 .6 2.2.9 3.5.9s2.5-.3 3.5-.9c-.7 1-1.8 1.6-3.5 1.6s-2.8-.6-3.5-1.6Z"/></svg><span class="skill-tooltip">Apache2</span></span>
+            <span class="skill-item" tabindex="0" aria-label="Docker"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h3V7h3v3h3V7h3v3h3v2H3v1c0 2.8 2.2 5 5 5h7c2.1 0 3.8-1.2 4.6-3 .8.2 1.6.2 2.4-.1-.7 2.8-3.2 5.1-6.3 5.1H8a7 7 0 0 1-7-7v-1h2V10Z"/></svg><span class="skill-tooltip">Docker</span></span>
+            <span class="skill-item" tabindex="0" aria-label="Linux"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-2.1 0-3 2.2-3 4.5 0 1.4-.6 2.8-1.4 4.1C6.6 13 5 14.5 5 17c0 2.2 1.8 3 4 3 .9 0 1.9-.3 3-.3s2.1.3 3 .3c2.2 0 4-.8 4-3 0-2.5-1.6-4-2.6-5.4C15.6 10.3 15 8.9 15 7.5 15 5.2 14.1 3 12 3Zm-3 12c.7 0 1.2.5 1.2 1.2S9.7 17.4 9 17.4s-1.2-.5-1.2-1.2S8.3 15 9 15Zm6 0c.7 0 1.2.5 1.2 1.2s-.5 1.2-1.2 1.2-1.2-.5-1.2-1.2S14.3 15 15 15Z"/></svg><span class="skill-tooltip">Linux</span></span>
           </div>
         </div>
 
-        <div class="about-copy">
-          <p>Ich entwickle Software, Plugins und Web-Anwendungen. Besonders gern arbeite ich an Systemen, bei denen eine saubere Struktur im Alltag einen echten Unterschied macht.</p>
-          <p>Mein Schwerpunkt liegt auf C#, Java und Backend-Logik. Dazu kommen Web-Technologien, Datenbanken und die Werkzeuge, die ein Projekt zuverlässig vom ersten Commit bis zum Betrieb bringen.</p>
-          <p>Guter Code muss für mich nicht clever wirken. Er soll verständlich bleiben, Fehler sichtbar machen und sich ohne Umwege erweitern lassen.</p>
-        </div>
-
-        <aside class="work-panel panel" aria-label="Arbeitsweise">
+        <aside class="work-panel" aria-label="Arbeitsweise">
           <p class="section-label">Arbeitsweise</p>
-          <h3>Einfach bauen. Sauber prüfen.</h3>
-          <ul>
-            <li><span>01</span> Kleine, getrennte Module</li>
-            <li><span>02</span> Lesbare Schnittstellen</li>
-            <li><span>03</span> Tests für kritische Logik</li>
-          </ul>
+          <h3>Ruhig planen. Klar umsetzen.</h3>
+          <p class="work-panel__text">Von Browser-Erweiterungen wie CR-Toolkit über Minecraft-Plugins bis zum Raspberry-Pi-Prototypen GRS-v1: Ich probiere Ideen praktisch aus, verbinde Software mit echter Hardware und bringe Projekte Schritt für Schritt in eine nutzbare Form.</p>
         </aside>
       </div>
     </section>
 
     <section class="page page-projects" id="projekte" aria-label="Projekte">
       <div class="projects-content">
-        <p class="section-label">Ausgewählte Arbeiten</p>
-        <h2>Neuste Projekte</h2>
+        <p class="section-label">GitHub-Projekte</p>
+        <h2>Ausgewählte Projekte</h2>
         <div class="project-grid">
-          <a class="project-card" href="projects.html#portfolio-system">
-            <img src="src/img/projects/featured_1.png" alt="Vorschau von Portfolio System">
+          <a class="project-card project-card--grs" href="projects.html#grs-v1">
+            <img src="src/img/pfi/original.png" alt="Vorschau von GamesRadioStation">
             <div class="project-card__content">
-              <h3>Portfolio System</h3>
+              <h3>GamesRadioStation</h3>
               <span class="project-card__cta">Jetzt anschauen</span>
             </div>
           </a>
-          <a class="project-card" href="projects.html#service-monitor">
-            <img src="src/img/projects/featured_2.png" alt="Vorschau von Service Monitor">
+          <a class="project-card project-card--ttv" href="projects.html#ttvnotifyme">
+            <img src="src/img/pfi/original.png" alt="Vorschau von TTVNotifyMe">
             <div class="project-card__content">
-              <h3>Service Monitor</h3>
+              <h3>TTVNotifyMe</h3>
               <span class="project-card__cta">Jetzt anschauen</span>
             </div>
           </a>
@@ -123,7 +113,7 @@
         <p class="section-label">Entdecke mehr</p>
         <h2>Alle Projekte</h2>
         <div class="category-grid">
-          <a class="category-card category-github" href="https://github.com/" target="_blank" rel="noreferrer">
+          <a class="category-card category-github" href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer">
             <img src="src/img/projects/bg_github.png" alt="GitHub Projekte">
             <span>GitHub</span>
             <small>Code &amp; Open Source</small>
@@ -146,9 +136,9 @@
       <div class="contact-content">
         <p class="section-label">Kontakt</p>
         <h2 id="contact-title">Lass uns schreiben.</h2>
-        <a class="contact-mail" href="mailto:contact@darkplugins.de">contact@darkplugins.de</a>
+        <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" aria-label="E-Mail-Adresse kopieren">contact@darkplugins.de</a>
         <div class="contact-links" aria-label="Direkte Links">
-          <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub öffnen">
+          <a href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer" aria-label="GitHub öffnen">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
             <span>GitHub</span>
           </a>
@@ -165,7 +155,13 @@
       </div>
     </section>
 
+    <div class="copy-notification" data-copy-notification role="status" aria-live="polite" hidden>
+      <span class="copy-notification__check" aria-hidden="true">✓</span>
+      <span data-copy-notification-message>In Zwischenablage kopiert</span>
+    </div>
+
     <script src="src/js/project-data.js"></script>
     <script src="src/js/index.js"></script>
+    <script src="src/js/notifications.js"></script>
   </body>
 </html>

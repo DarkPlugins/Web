@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/notifications.css">
   </head>
   <body class="projects-page">
     <header class="site-header">
@@ -28,12 +29,14 @@
     </header>
 
     <main class="projects-index" id="start">
-      <header class="projects-index__intro">
-        <p class="section-label">Archiv</p>
-        <h1>Alle Projekte</h1>
-        <p>Neun Projekte in drei Themen. Weitere Arbeiten können sich nahtlos an die bestehenden Reihen anschließen.</p>
-      </header>
-      <div class="project-groups" data-project-groups></div>
+      <section class="project-slide project-slide--overview" aria-labelledby="projects-title">
+        <header class="projects-index__intro">
+          <p class="section-label">Archiv</p>
+          <h1 id="projects-title">Alle Projekte</h1>
+          <p>Projekte aus Browser-Entwicklung, Minecraft-Plugins und Hardware-Prototypen – nicht alles ist auf GitHub einsehbar.</p>
+        </header>
+        <div class="project-slide__groups project-groups" data-project-groups></div>
+      </section>
     </main>
 
     <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-project-modal hidden>
@@ -41,23 +44,33 @@
         <span></span><span></span>
       </button>
       <div class="project-modal__visual">
-        <img src="src/img/projects/featured_1.png" alt="" data-modal-image>
+        <img src="src/img/pfi/original.png" alt="" data-modal-image>
       </div>
       <div class="project-modal__content">
         <p class="section-label" data-modal-theme></p>
+        <div class="modal-project-status" aria-label="Projektstatus">
+          <div class="modal-project-status__items" data-modal-status></div>
+          <span class="project-privacy" data-modal-private hidden>Sourcecode private</span>
+        </div>
         <h2 id="modal-title" data-modal-title></h2>
         <p class="project-modal__lead" data-modal-description></p>
         <p data-modal-details></p>
         <dl>
           <div><dt>Jahr</dt><dd data-modal-year></dd></div>
-          <div><dt>Skills</dt><dd><ul data-modal-skills></ul></dd></div>
+          <div><dt>Technologien</dt><dd><ul data-modal-skills></ul></dd></div>
         </dl>
-        <a class="modal-link" href="https://github.com/" target="_blank" rel="noreferrer" data-modal-link>Projekt öffnen</a>
+        <div class="modal-actions">
+          <a class="modal-link" href="https://github.com/" target="_blank" rel="noreferrer" data-modal-link>Projekt ansehen</a>
+          <a class="modal-download" href="src/img/pfi/original.png" download="original.png" data-modal-download>Herunterladen</a>
+          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noreferrer" data-modal-spigot hidden>Spigot Download</a>
+          <span class="modal-source-note" data-modal-source-note hidden>Sourcecode nicht verfügbar</span>
+        </div>
       </div>
     </section>
 
     <script src="src/js/project-data.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/projects.js"></script>
+    <script src="src/js/notifications.js"></script>
   </body>
 </html>
