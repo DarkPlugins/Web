@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://darkplugins.de/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://darkplugins.de/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://darkplugins.de/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://darkplugins.de/index.html" />
+  </url>
+  <url>
+    <loc>https://darkplugins.de/projects.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://darkplugins.de/projects.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://darkplugins.de/de/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://darkplugins.de/projects.html" />
+  </url>
+  <url>
+    <loc>https://darkplugins.de/de/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://darkplugins.de/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://darkplugins.de/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://darkplugins.de/index.html" />
+  </url>
+  <url>
+    <loc>https://darkplugins.de/de/projects.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://darkplugins.de/projects.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://darkplugins.de/de/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://darkplugins.de/projects.html" />
+  </url>
+</urlset>

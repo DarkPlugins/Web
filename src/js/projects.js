@@ -1,19 +1,42 @@
-const projectGroupsRoot = document.querySelector("[data-project-groups]");
-const projectsPage = document.querySelector(".projects-index");
-const overviewSlide = projectGroupsRoot?.closest(".project-slide");
 const modal = document.querySelector("[data-project-modal]");
 const modalCloseButton = document.querySelector("[data-modal-close]");
 const projects = Array.isArray(globalThis.PROJECTS) ? globalThis.PROJECTS : [];
 const projectMap = new Map(projects.map((project) => [project.slug, project]));
-
-const projectsByTheme = projects.reduce((result, project) => {
-  const group = result.get(project.theme) ?? [];
-  group.push(project);
-  result.set(project.theme, group);
-  return result;
-}, new Map());
-
-const themeGroupEntries = Array.from(projectsByTheme.entries());
+const isGerman = document.documentElement.lang === "de";
+const assetPrefix = isGerman ? "../" : "";
+const locale = isGerman ? "de" : "en";
+const localeText = {
+  en: {
+    imageAlt: "Preview image for {title}",
+    theme: {
+      "Web & Extensions": "Web & Extensions",
+      "Minecraft Plugins": "Minecraft Plugins",
+      "Prototypes & Hardware": "Prototypes & Hardware",
+      "Tools & Analysis": "Tools & Analysis"
+    },
+    status: {
+      finished: "Finished",
+      active: "Active Development",
+      notReleased: "Not released yet",
+      prototype: "Prototype"
+    }
+  },
+  de: {
+    imageAlt: "Vorschaubild für {title}",
+    theme: {
+      "Web & Extensions": "Web & Erweiterungen",
+      "Minecraft Plugins": "Minecraft-Plugins",
+      "Prototypes & Hardware": "Prototypen & Hardware",
+      "Tools & Analysis": "Tools & Analyse"
+    },
+    status: {
+      finished: "Fertiggestellt",
+      active: "Aktive Entwicklung",
+      notReleased: "Noch nicht veröffentlicht",
+      prototype: "Prototyp"
+    }
+  }
+}[locale];
 let activeProject = null;
 let previousFocus = null;
 
@@ -33,17 +56,22 @@ const modalElements = modal ? {
   image: modal.querySelector("[data-modal-image]")
 } : null;
 
-const translate = (key, fallback, variables) => window.translations?.t(key, fallback, variables) ?? fallback;
-const projectText = (project, field) => window.translations?.projectText(project, field) ?? project[field];
-const projectSkills = (project) => window.translations?.projectSkills(project) ?? project.skills;
-const translatedTheme = (theme) => window.translations?.themeText(theme) ?? theme;
+const projectText = (project, field) => {
+  if (locale === "de") return project[`${field}De`] ?? project[field];
+  return project[field];
+};
+
+const projectSkills = (project) => locale === "de"
+  ? project.skillsDe ?? project.skills
+  : project.skills;
+
+const translatedTheme = (theme) => localeText.theme[theme] ?? theme;
 
 const statusMarkup = (project) => {
   const statuses = project.statuses ?? [{ key: project.status, className: project.statusClass }];
   return statuses
     .map((status) => {
-      const fallback = status.label ?? status.key ?? status.className;
-      const label = window.translations?.statusText(status.key, fallback) ?? fallback;
+      const label = localeText.status[status.key] ?? status.label ?? status.key ?? status.className;
       return `
         <span class="project-status project-status--${status.className}">
           <span class="project-status__dot" aria-hidden="true"></span>
@@ -53,65 +81,7 @@ const statusMarkup = (project) => {
     .join("");
 };
 
-const createProjectGroup = ([theme, projects]) => {
-  const section = document.createElement("section");
-  section.className = "project-group";
-  section.innerHTML = `
-    <div class="project-group__heading">
-      <p class="section-label">${translate("archive.theme", "Theme")}</p>
-      <h2>${translatedTheme(theme)}</h2>
-    </div>
-    <div class="project-list"></div>`;
-
-  const list = section.querySelector(".project-list");
-  projects.forEach((project) => {
-    const card = document.createElement("article");
-    card.className = "project-tile";
-    card.innerHTML = `
-      <a class="project-tile__image-link" href="#${project.slug}" aria-haspopup="dialog" aria-label="${translate("archive.viewProject", "View project")}: ${project.title}">
-        <img src="${project.image}" alt="${translate("archive.projectImageAlt", "Preview image for {title}", { title: project.title })}" loading="lazy" decoding="async">
-      </a>
-      <div class="project-tile__badges">
-        ${statusMarkup(project)}
-        ${project.sourcePrivate ? `<span class="project-privacy">${translate("archive.privateSource", "Source code private")}</span>` : ""}
-      </div>
-      <div class="project-tile__content">
-        <strong>${project.title}</strong>
-        <small>${projectSkills(project).join(" · ")}</small>
-        <div class="project-tile__actions">
-          <a class="project-tile__button" href="#${project.slug}" aria-haspopup="dialog">${translate("archive.viewProject", "View project")}</a>
-        </div>
-      </div>`;
-    list.append(card);
-  });
-
-  return section;
-};
-
-const renderProjectGroups = () => {
-  if (!projectGroupsRoot || !projectsPage || !overviewSlide) return;
-
-  projectGroupsRoot.replaceChildren();
-  projectsPage.querySelectorAll(".project-slide:not(.project-slide--overview)").forEach((slide) => slide.remove());
-
-  for (let index = 0; index < themeGroupEntries.length; index += 2) {
-    const slide = index === 0 ? overviewSlide : document.createElement("section");
-    const slideGroups = index === 0 ? projectGroupsRoot : document.createElement("div");
-
-    if (index > 0) {
-      slide.className = "project-slide";
-      slide.setAttribute(
-        "aria-label",
-        translate("archive.slideAria", "Projects {number}", { number: Math.floor(index / 2) + 1 })
-      );
-      slideGroups.className = "project-slide__groups project-groups";
-      slide.append(slideGroups);
-      projectsPage.append(slide);
-    }
-
-    slideGroups.append(...themeGroupEntries.slice(index, index + 2).map(createProjectGroup));
-  }
-};
+const assetPath = (path) => `${assetPrefix}${path}`;
 
 function openProject(project) {
   if (!modal || !modalElements) return;
@@ -139,8 +109,8 @@ function openProject(project) {
   modalElements.spigot.hidden = !project.spigotHref;
   if (project.spigotHref) modalElements.spigot.href = project.spigotHref;
   modalElements.sourceNote.hidden = project.sourceAvailable !== false;
-  modalElements.image.src = project.image;
-  modalElements.image.alt = translate("archive.projectImageAlt", "Preview image for {title}", { title: project.title });
+  modalElements.image.src = assetPath(project.image);
+  modalElements.image.alt = localeText.imageAlt.replace("{title}", project.title);
   modal.dataset.theme = project.theme;
   modal.hidden = false;
   document.documentElement.classList.add("modal-open");
@@ -182,16 +152,8 @@ function syncProjectFromHash() {
   }
 }
 
-if (projectGroupsRoot && projectsPage && overviewSlide && modal) {
-  renderProjectGroups();
-}
-
 modalCloseButton?.addEventListener("click", closeProject);
 window.addEventListener("hashchange", syncProjectFromHash);
-window.addEventListener("languagechange", () => {
-  renderProjectGroups();
-  if (modal && !modal.hidden && activeProject) openProject(activeProject);
-});
 document.addEventListener("keydown", (event) => {
   if (!modal || modal.hidden) return;
 

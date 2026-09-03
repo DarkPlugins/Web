@@ -2,16 +2,17 @@
   const preloader = document.querySelector("[data-preloader]");
   if (!preloader) return;
 
+  const assetPrefix = document.documentElement.lang === "de" ? "../" : "";
   const criticalSources = [
-    "src/img/logo.webp",
-    "src/img/logo128.webp",
-    "src/img/pfi/01.webp",
-    "src/img/pfi/02.webp",
-    "src/img/pfi/03.webp",
-    "src/img/pfi/04.webp",
-    "src/img/pfi/05.webp",
-    "src/img/pfi/06.webp",
-    "src/img/pfi/07.webp"
+    `${assetPrefix}src/img/logo.webp`,
+    `${assetPrefix}src/img/logo128.webp`,
+    `${assetPrefix}src/img/pfi/01.webp`,
+    `${assetPrefix}src/img/pfi/02.webp`,
+    `${assetPrefix}src/img/pfi/03.webp`,
+    `${assetPrefix}src/img/pfi/04.webp`,
+    `${assetPrefix}src/img/pfi/05.webp`,
+    `${assetPrefix}src/img/pfi/06.webp`,
+    `${assetPrefix}src/img/pfi/07.webp`
   ];
   const pageSources = Array.from(document.images)
     .filter((image) => image.loading !== "lazy")

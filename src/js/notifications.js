@@ -107,6 +107,9 @@
     if (!(await copyText(trigger.dataset.copyText))) return;
 
     playCopySound();
-    showNotification(window.translations?.t("notification.copied", "Copied to clipboard") ?? "Copied to clipboard");
+    const copiedMessage = document.documentElement.lang === "de"
+      ? "In die Zwischenablage kopiert"
+      : "Copied to clipboard";
+    showNotification(copiedMessage);
   });
 })();

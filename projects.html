@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="DarkPlugins portfolio featuring Java, C#, JavaScript and Node.js projects, web tools, browser extensions, Minecraft plugins and Raspberry Pi prototypes.">
     <meta name="keywords" content="DarkPlugins, software engineer, software portfolio, Java, C#, JavaScript, Node.js, HTML, CSS, web development, browser extensions, Minecraft plugins, SpigotMC, Raspberry Pi, Linux, hardware prototypes, arcade machine, desktop applications">
+    <link rel="canonical" href="https://darkplugins.de/projects.html">
+    <link rel="alternate" hreflang="en" href="https://darkplugins.de/projects.html">
+    <link rel="alternate" hreflang="de" href="https://darkplugins.de/de/projects.html">
+    <link rel="alternate" hreflang="x-default" href="https://darkplugins.de/projects.html">
     <meta name="theme-color" content="#081229">
-    <title data-i18n="meta.projectsTitle">All projects · DarkPlugins</title>
+    <title>All projects · DarkPlugins</title>
     <link rel="icon" type="image/webp" sizes="128x128" href="src/img/logo128.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,28 +45,28 @@
                                               |_|        
   -->                                       
   <body class="projects-page is-loading">
-    <div class="preloader" data-preloader role="status" data-i18n-aria-label="preloader.loading" aria-label="Loading page">
+    <div class="preloader" data-preloader role="status" aria-label="Loading page">
       <img class="preloader__logo" src="src/img/logo128.webp" alt="DarkPlugins" width="128" height="128" decoding="async">
     </div>
-    <a class="skip-link" href="#home" data-i18n="nav.skipToContent">Skip to content</a>
+    <a class="skip-link" href="#home">Skip to content</a>
     <header class="site-header">
-      <a class="logo" href="index.html#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
+      <a class="logo" href="index.html#home" aria-label="Go to home">
         <img src="src/img/logo.webp" alt="DarkPlugins Logo" width="280" height="280" decoding="async">
       </a>
       <details class="menu">
-        <summary data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span></span><span></span></summary>
-        <nav data-i18n-aria-label="nav.main" aria-label="Main navigation">
+        <summary aria-label="Open menu"><span></span><span></span></summary>
+        <nav aria-label="Main navigation">
           <div class="language-switcher">
-            <label for="language-select" data-i18n="language.label">Language</label>
+            <label for="language-select">Language</label>
             <select id="language-select" data-language-select>
-              <option value="en" data-i18n="language.english">English</option>
-              <option value="de" data-i18n="language.german">German</option>
+              <option value="en">English</option>
+              <option value="de">German</option>
             </select>
           </div>
-          <a href="index.html#about" data-i18n="nav.about">About</a>
-          <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
-          <a href="#home" data-i18n="nav.allProjects">All Projects</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="#home">All Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </details>
     </header>
@@ -70,39 +74,167 @@
     <main class="projects-index" id="home">
       <section class="project-slide project-slide--overview" aria-labelledby="projects-title">
         <header class="projects-index__intro">
-          <p class="section-label" data-i18n="archive.label">Archive</p>
-          <h1 id="projects-title" data-i18n="archive.heading">All projects</h1>
-          <p data-i18n="archive.intro">Projects from browser development, Minecraft plugins, and hardware prototypes — not everything is visible on GitHub.</p>
+          <p class="section-label">Archive</p>
+          <h1 id="projects-title">All projects</h1>
+          <p>Projects from browser development, Minecraft plugins, and hardware prototypes — not everything is visible on GitHub.</p>
         </header>
-        <div class="project-slide__groups project-groups" data-project-groups></div>
+        <div class="project-slide__groups project-groups">
+          <section class="project-group">
+            <div class="project-group__heading">
+              <p class="section-label">Theme</p>
+              <h2>Web &amp; Extensions</h2>
+            </div>
+            <div class="project-list">
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#ttvnotifyme" aria-haspopup="dialog" aria-label="View project: TTVNotifyMe">
+                  <img src="src/img/projects/ttvnotifyme/bel_01.webp" alt="Preview image for TTVNotifyMe" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>TTVNotifyMe</strong><small>JavaScript · Browser Extension · Notifications</small><div class="project-tile__actions"><a class="project-tile__button" href="#ttvnotifyme" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#media-downloader" aria-haspopup="dialog" aria-label="View project: MediaDownloader">
+                  <img src="src/img/projects/mediadownloader/bel_01.webp" alt="Preview image for MediaDownloader" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>MediaDownloader</strong><small>JavaScript · Browser Extension · Media</small><div class="project-tile__actions"><a class="project-tile__button" href="#media-downloader" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#cr-toolkit" aria-haspopup="dialog" aria-label="View project: CR-Toolkit">
+                  <img src="src/img/projects/cr-toolkit/bel_01.webp" alt="Preview image for CR-Toolkit" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--active"><span class="project-status__dot" aria-hidden="true"></span>Active Development</span></div>
+                <div class="project-tile__content"><strong>CR-Toolkit</strong><small>JavaScript · Browser Extension · UI</small><div class="project-tile__actions"><a class="project-tile__button" href="#cr-toolkit" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#flipacoin" aria-haspopup="dialog" aria-label="View project: FlipACoin">
+                  <img src="src/img/projects/default.webp" alt="Preview image for FlipACoin" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>FlipACoin</strong><small>JavaScript · HTML · CSS</small><div class="project-tile__actions"><a class="project-tile__button" href="#flipacoin" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#web" aria-haspopup="dialog" aria-label="View project: Web">
+                  <img src="src/img/projects/default.webp" alt="Preview image for Web" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>Web</strong><small>HTML · CSS · JavaScript</small><div class="project-tile__actions"><a class="project-tile__button" href="#web" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+            </div>
+          </section>
+          <section class="project-group">
+            <div class="project-group__heading">
+              <p class="section-label">Theme</p>
+              <h2>Minecraft Plugins</h2>
+            </div>
+            <div class="project-list">
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#blacklist" aria-haspopup="dialog" aria-label="View project: Blacklist">
+                  <img src="src/img/projects/blacklist/pl_01.webp" alt="Preview image for Blacklist" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>Blacklist</strong><small>Java · Minecraft · Spigot</small><div class="project-tile__actions"><a class="project-tile__button" href="#blacklist" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#relevant-commands-only" aria-haspopup="dialog" aria-label="View project: RelevantCommandsOnly">
+                  <img src="src/img/projects/default.webp" alt="Preview image for RelevantCommandsOnly" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--not-released"><span class="project-status__dot" aria-hidden="true"></span>Not released yet</span><span class="project-status project-status--active"><span class="project-status__dot" aria-hidden="true"></span>Active Development</span></div>
+                <div class="project-tile__content"><strong>RelevantCommandsOnly</strong><small>Java · Minecraft · Tab Completer</small><div class="project-tile__actions"><a class="project-tile__button" href="#relevant-commands-only" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#2fa" aria-haspopup="dialog" aria-label="View project: 2FA">
+                  <img src="src/img/projects/2fa/pl_01.webp" alt="Preview image for 2FA" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>2FA</strong><small>Java · Minecraft · Security</small><div class="project-tile__actions"><a class="project-tile__button" href="#2fa" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#verifybot" aria-haspopup="dialog" aria-label="View project: VerifyBot">
+                  <img src="src/img/projects/default.webp" alt="Preview image for VerifyBot" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--not-released"><span class="project-status__dot" aria-hidden="true"></span>Not released yet</span><span class="project-status project-status--active"><span class="project-status__dot" aria-hidden="true"></span>Active Development</span></div>
+                <div class="project-tile__content"><strong>VerifyBot</strong><small>Java · Minecraft · Discord · TeamSpeak</small><div class="project-tile__actions"><a class="project-tile__button" href="#verifybot" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#ads" aria-haspopup="dialog" aria-label="View project: Ads">
+                  <img src="src/img/projects/ads/pl_01.webp" alt="Preview image for Ads" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span></div>
+                <div class="project-tile__content"><strong>Ads</strong><small>Java · Minecraft · Spigot · CityBuild</small><div class="project-tile__actions"><a class="project-tile__button" href="#ads" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="project-slide" aria-label="Projects 2">
+        <div class="project-slide__groups project-groups">
+          <section class="project-group">
+            <div class="project-group__heading">
+              <p class="section-label">Theme</p>
+              <h2>Prototypes &amp; Hardware</h2>
+            </div>
+            <div class="project-list">
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#grs-v1" aria-haspopup="dialog" aria-label="View project: GamesRadioStation">
+                  <img src="src/img/projects/grs/pt_01.webp" alt="Preview image for GamesRadioStation" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--prototype"><span class="project-status__dot" aria-hidden="true"></span>Prototype</span></div>
+                <div class="project-tile__content"><strong>GamesRadioStation</strong><small>Python · Raspberry Pi · Linux · Bluetooth</small><div class="project-tile__actions"><a class="project-tile__button" href="#grs-v1" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#arcade" aria-haspopup="dialog" aria-label="View project: Arcade">
+                  <img src="src/img/projects/arcade/pt_01.webp" alt="Preview image for Arcade" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span><span class="project-privacy">Source code private</span></div>
+                <div class="project-tile__content"><strong>Arcade</strong><small>Node.js · HTML · CSS · JavaScript · Joystick Integration</small><div class="project-tile__actions"><a class="project-tile__button" href="#arcade" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+            </div>
+          </section>
+          <section class="project-group">
+            <div class="project-group__heading">
+              <p class="section-label">Theme</p>
+              <h2>Tools &amp; Analysis</h2>
+            </div>
+            <div class="project-list">
+              <article class="project-tile">
+                <a class="project-tile__image-link" href="#energy-analyzer-1-0" aria-haspopup="dialog" aria-label="View project: EnergyAnalyzer 1.0">
+                  <img src="src/img/projects/default.webp" alt="Preview image for EnergyAnalyzer 1.0" loading="lazy" decoding="async">
+                </a>
+                <div class="project-tile__badges"><span class="project-status project-status--finished"><span class="project-status__dot" aria-hidden="true"></span>Finished</span><span class="project-privacy">Source code private</span></div>
+                <div class="project-tile__content"><strong>EnergyAnalyzer 1.0</strong><small>C# · SMARD API · JSON · Desktop</small><div class="project-tile__actions"><a class="project-tile__button" href="#energy-analyzer-1-0" aria-haspopup="dialog">View project</a></div></div>
+              </article>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
 
     <footer class="page page-contact" id="contact" aria-labelledby="contact-heading">
       <div class="contact-content">
-        <p class="section-label" data-i18n="contact.label">Contact</p>
-        <h2 id="contact-heading" data-i18n="contact.heading">Let's write.</h2>
-        <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" data-i18n-aria-label="contact.copyEmail" aria-label="Copy email address">contact@darkplugins.de</a>
-        <div class="contact-links" data-i18n-aria-label="contact.linksAria" aria-label="Direct links">
-          <a href="https://www.spigotmc.org/resources/ads-chat-advertising-with-teleport.114097/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
+        <p class="section-label">Contact</p>
+        <h2 id="contact-heading">Let's write.</h2>
+        <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" aria-label="Copy email address">contact@darkplugins.de</a>
+        <div class="contact-links" aria-label="Direct links">
+          <a href="https://www.spigotmc.org/resources/ads-chat-advertising-with-teleport.114097/" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
             <span>GitHub</span>
           </a>
-          <a href="https://www.spigotmc.org/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
+          <a href="https://www.spigotmc.org/" target="_blank" rel="noopener noreferrer" aria-label="Open SpigotMC">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v5H9v3h8v5H9v5H5V3Zm4 5h6V6H9v2Zm0 8h4v-2H9v2Z"/></svg>
             <span>SpigotMC</span>
           </a>
-          <a href="mailto:contact@darkplugins.de" data-i18n-aria-label="contact.emailAria" aria-label="Write an email">
+          <a href="mailto:contact@darkplugins.de" aria-label="Write an email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm9 7 7-5H5l7 5Zm0 2.5L5 9.7V17h14V9.7l-7 4.8Z"/></svg>
-            <span data-i18n="contact.emailLabel">Email</span>
+            <span>Email</span>
           </a>
         </div>
-        <p class="contact-note" data-i18n="contact.note">For project requests, plugins, or a technical exchange, email is the fastest way to reach me.</p>
+        <p class="contact-note">For project requests, plugins, or a technical exchange, email is the fastest way to reach me.</p>
       </div>
     </footer>
 
     <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" data-project-modal hidden>
-      <button class="modal-close" type="button" data-i18n-aria-label="archive.closeModal" aria-label="Close project" data-modal-close>
+      <button class="modal-close" type="button" aria-label="Close project" data-modal-close>
         <span></span><span></span>
       </button>
       <div class="project-modal__visual">
@@ -110,34 +242,33 @@
       </div>
       <div class="project-modal__content">
         <p class="section-label" data-modal-theme></p>
-        <div class="modal-project-status" data-i18n-aria-label="archive.statusAria" aria-label="Project status">
+        <div class="modal-project-status" aria-label="Project status">
           <div class="modal-project-status__items" data-modal-status></div>
-          <span class="project-privacy" data-modal-private data-i18n="archive.privateSource" hidden>Source code private</span>
+          <span class="project-privacy" data-modal-private hidden>Source code private</span>
         </div>
         <h2 id="modal-title" data-modal-title></h2>
         <p class="project-modal__lead" id="modal-description" data-modal-description></p>
         <p data-modal-details></p>
         <dl>
-          <div><dt data-i18n="archive.year">Year</dt><dd data-modal-year></dd></div>
-          <div><dt data-i18n="archive.technologies">Technologies</dt><dd><ul data-modal-skills></ul></dd></div>
+          <div><dt>Year</dt><dd data-modal-year></dd></div>
+          <div><dt>Technologies</dt><dd><ul data-modal-skills></ul></dd></div>
         </dl>
         <div class="modal-actions">
-          <a class="modal-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-i18n="archive.viewProject" data-modal-link>View project</a>
-          <a class="modal-download" href="src/img/pfi/original.webp" download="original.webp" data-i18n="archive.download" data-modal-download>Download</a>
-          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noopener noreferrer" data-i18n="archive.spigotDownload" data-modal-spigot hidden>Spigot download</a>
-          <span class="modal-source-note" data-modal-source-note data-i18n="archive.sourceUnavailable" hidden>Source code unavailable</span>
+          <a class="modal-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-modal-link>View project</a>
+          <a class="modal-download" href="src/img/pfi/original.webp" download="original.webp" data-modal-download>Download</a>
+          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noopener noreferrer" data-modal-spigot hidden>Spigot download</a>
+          <span class="modal-source-note" data-modal-source-note hidden>Source code unavailable</span>
         </div>
       </div>
     </section>
 
     <div class="copy-notification" data-copy-notification role="status" aria-live="polite" hidden>
       <span class="copy-notification__check" aria-hidden="true">✓</span>
-      <span data-copy-notification-message data-i18n="notification.copied">Copied to clipboard</span>
+      <span data-copy-notification-message>Copied to clipboard</span>
     </div>
 
     <script src="src/js/project-data.js"></script>
     <script src="src/js/preloader.js"></script>
-    <script src="src/js/translations.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/projects.js"></script>
     <script src="src/js/notifications.js"></script>

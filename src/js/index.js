@@ -50,6 +50,9 @@ const projectList = document.querySelector("[data-project-nav-list]");
 const projectToggle = document.querySelector("[data-project-nav-toggle]");
 const menu = document.querySelector(".menu");
 const menuSummary = menu?.querySelector("summary");
+const languageSelect = document.querySelector("[data-language-select]");
+const currentLanguage = document.documentElement.lang === "de" ? "de" : "en";
+const languageCookieName = "de.darkplugins.cookie.language";
 
 if (projectList && projectToggle && Array.isArray(window.PROJECTS)) {
   window.PROJECTS.forEach((project) => {
@@ -63,6 +66,24 @@ if (projectList && projectToggle && Array.isArray(window.PROJECTS)) {
     const isOpen = projectToggle.getAttribute("aria-expanded") === "true";
     projectToggle.setAttribute("aria-expanded", String(!isOpen));
     projectList.hidden = isOpen;
+  });
+}
+
+if (languageSelect) {
+  languageSelect.value = currentLanguage;
+  languageSelect.addEventListener("change", (event) => {
+    const nextLanguage = event.target.value === "de" ? "de" : "en";
+    const pageName = window.location.pathname.endsWith("/")
+      ? "index.html"
+      : window.location.pathname.split("/").pop() || "index.html";
+    const targetPage = nextLanguage === "de" ? `de/${pageName}` : `../${pageName}`;
+    const targetUrl = new URL(
+      `${targetPage}${window.location.search}${window.location.hash}`,
+      window.location.href
+    );
+
+    document.cookie = `${languageCookieName}=${nextLanguage}; path=/; max-age=31536000; SameSite=Lax`;
+    window.location.assign(targetUrl.href);
   });
 }
 
