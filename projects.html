@@ -34,7 +34,7 @@
           <a href="index.html#about" data-i18n="nav.about">About</a>
           <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
           <a href="#home" data-i18n="nav.allProjects">All Projects</a>
-          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
       </details>
     </header>
@@ -49,6 +49,29 @@
         <div class="project-slide__groups project-groups" data-project-groups></div>
       </section>
     </main>
+
+    <footer class="page page-contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-content">
+        <p class="section-label" data-i18n="contact.label">Contact</p>
+        <h2 id="contact-heading" data-i18n="contact.heading">Let's write.</h2>
+        <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" data-i18n-aria-label="contact.copyEmail" aria-label="Copy email address">contact@darkplugins.de</a>
+        <div class="contact-links" data-i18n-aria-label="contact.linksAria" aria-label="Direct links">
+          <a href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.spigotmc.org/" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v5H9v3h8v5H9v5H5V3Zm4 5h6V6H9v2Zm0 8h4v-2H9v2Z"/></svg>
+            <span>SpigotMC</span>
+          </a>
+          <a href="mailto:contact@darkplugins.de" data-i18n-aria-label="contact.emailAria" aria-label="Write an email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm9 7 7-5H5l7 5Zm0 2.5L5 9.7V17h14V9.7l-7 4.8Z"/></svg>
+            <span data-i18n="contact.emailLabel">Email</span>
+          </a>
+        </div>
+        <p class="contact-note" data-i18n="contact.note">For project requests, plugins, or a technical exchange, email is the fastest way to reach me.</p>
+      </div>
+    </footer>
 
     <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-project-modal hidden>
       <button class="modal-close" type="button" data-i18n-aria-label="archive.closeModal" aria-label="Close project" data-modal-close>
@@ -78,6 +101,11 @@
         </div>
       </div>
     </section>
+
+    <div class="copy-notification" data-copy-notification role="status" aria-live="polite" hidden>
+      <span class="copy-notification__check" aria-hidden="true">✓</span>
+      <span data-copy-notification-message data-i18n="notification.copied">Copied to clipboard</span>
+    </div>
 
     <script src="src/js/project-data.js"></script>
     <script src="src/js/preloader.js"></script>
