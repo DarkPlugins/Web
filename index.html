@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" data-i18n-content="meta.homeDescription">
+    <meta name="description" content="DarkPlugins portfolio featuring Java, C#, JavaScript and Node.js projects, web tools, browser extensions, Minecraft plugins and Raspberry Pi prototypes.">
+    <meta name="keywords" content="DarkPlugins, software engineer, software portfolio, Java, C#, JavaScript, Node.js, HTML, CSS, web development, browser extensions, Minecraft plugins, SpigotMC, Raspberry Pi, Linux, hardware prototypes, arcade machine, desktop applications">
+    <meta name="theme-color" content="#081229">
     <title data-i18n="meta.homeTitle">DarkPlugins · Portfolio</title>
+    <link rel="icon" type="image/webp" sizes="128x128" href="src/img/logo128.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,13 +16,38 @@
     <link rel="stylesheet" href="src/css/preloader.css">
     <link rel="stylesheet" href="src/css/notifications.css">
   </head>
+  <!--
+            .__....._             _.....__,
+              .": o :':         ;': o :".
+              `. `-' .'.       .'. `-' .'
+                `---'             `---'
+
+      _...----...      ...   ...      ...----..._
+  .-'__..-""'----    `.  `"`  .'    ----'""-..__`-.
+  '.-'   _.--"""'       `-._.-'       '"""--._   `-.`
+  '  .-"'                  :                  `"-.  `
+    '   `.              _.'"'._              .'   `
+          `.       ,.-'"       "'-.,       .'
+            `.                           .'
+              `-._                   _.-'
+                  `"'--...___...--'"`
+
+
+  __        __ _           _                       _   
+  \ \      / /| |__   __ _| |_ ___    _   _ _ __ | |  
+    \ \ /\ / / | '_ \ / _` | __/ __|  | | | | '_ \| |  
+    \ V  V /  | | | | (_| | |_\__ \  | |_| | |_) |_|  
+      \_/\_/   |_| |_|\__,_|\__|___/   \__,_| .__/(_)  
+                                              |_|        
+  -->   
   <body class="is-loading">
     <div class="preloader" data-preloader role="status" data-i18n-aria-label="preloader.loading" aria-label="Loading page">
-      <img class="preloader__logo" src="src/img/logo128.png" alt="DarkPlugins">
+      <img class="preloader__logo" src="src/img/logo128.webp" alt="DarkPlugins" width="128" height="128" decoding="async">
     </div>
+    <a class="skip-link" href="#home" data-i18n="nav.skipToContent">Skip to content</a>
     <header class="site-header">
       <a class="logo" href="#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
-        <img src="src/img/logo.png" alt="DarkPlugins Logo">
+        <img src="src/img/logo.webp" alt="DarkPlugins Logo" width="280" height="280" decoding="async">
       </a>
       <details class="menu">
         <summary data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span></span><span></span></summary>
@@ -36,11 +64,11 @@
           <div class="menu-projects">
             <div class="menu-projects__head">
               <a href="projects.html" data-i18n="nav.allProjects">All Projects</a>
-              <button type="button" data-i18n-aria-label="nav.openProjectList" aria-label="Open project list" aria-expanded="false" data-project-nav-toggle>
+              <button type="button" data-i18n-aria-label="nav.openProjectList" aria-label="Open project list" aria-controls="project-nav-list" aria-expanded="false" data-project-nav-toggle>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg>
               </button>
             </div>
-            <div class="menu-projects__list" data-project-nav-list hidden></div>
+            <div class="menu-projects__list" id="project-nav-list" data-project-nav-list hidden></div>
           </div>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
@@ -49,22 +77,22 @@
 
     <section class="page page-home" id="home">
       <h1 class="page-title">DarkPlugins</h1>
-      <main class="gallery" data-i18n-aria-label="home.galleryAria" aria-label="Portfolio gallery">
-        <img class="picture" src="src/img/pfi/01.png" alt="">
-        <img class="picture" src="src/img/pfi/02.png" alt="">
-        <img class="picture" src="src/img/pfi/03.png" alt="">
-        <img class="picture" src="src/img/pfi/04.png" alt="">
-        <img class="picture" src="src/img/pfi/05.png" alt="">
-        <img class="picture" src="src/img/pfi/06.png" alt="">
-        <img class="picture" src="src/img/pfi/07.png" alt="">
-      </main>
+      <div class="gallery" role="img" data-i18n-aria-label="home.galleryAria" aria-label="Portfolio gallery">
+        <img class="picture" src="src/img/pfi/01.webp" alt="" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="sync">
+        <img class="picture" src="src/img/pfi/02.webp" alt="" width="1376" height="1143" loading="eager" fetchpriority="high" decoding="sync">
+        <img class="picture" src="src/img/pfi/03.webp" alt="" width="1454" height="1086" loading="eager" fetchpriority="high" decoding="sync">
+        <img class="picture" src="src/img/pfi/04.webp" alt="" width="1180" height="1333" loading="eager" fetchpriority="high" decoding="sync">
+        <img class="picture" src="src/img/pfi/05.webp" alt="" width="1122" height="1402" loading="eager" fetchpriority="high" decoding="sync">
+        <img class="picture" src="src/img/pfi/06.webp" alt="" width="1660" height="920" loading="eager" fetchpriority="high" decoding="sync">
+        <img class="picture" src="src/img/pfi/07.webp" alt="" width="1149" height="1369" loading="eager" fetchpriority="high" decoding="sync">
+      </div>
       <p class="page-subtitle" data-i18n="home.role">Software Engineer</p>
     </section>
 
     <section class="page page-about" id="about" data-i18n-aria-label="about.sectionAria" aria-labelledby="about-heading">
       <div class="about-grid">
         <div class="about-copy">
-          <img class="about-logo" src="src/img/logo128.png" alt="DarkPlugins Logo">
+          <img class="about-logo" src="src/img/logo128.webp" alt="DarkPlugins Logo" width="128" height="128" loading="lazy" decoding="async">
           <p class="section-label" data-i18n="about.label">About me</p>
           <h2 id="about-heading" data-i18n="about.heading">Code with a clear purpose.</h2>
           <p data-i18n="about.paragraph1">I build, test, and publish personal software projects — from browser extensions and small web tools to Minecraft plugins and Raspberry Pi prototypes.</p>
@@ -75,23 +103,141 @@
         <div class="skills-panel">
           <p class="section-label" data-i18n="about.skills">Skills</p>
           <div class="skill-grid" data-i18n-aria-label="about.technologiesAria" aria-label="Technologies">
-            <span class="skill-item" tabindex="0" aria-label="C Sharp"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 7.2 14.4l-1.6-1.2A7 7 0 1 1 12 5c1.5 0 2.9.5 4 1.3V4.1A9 9 0 0 0 12 3Zm-5 8h5v2H7v-2Zm7 0h5v2h-5v-2Z"/></svg><span class="skill-tooltip">C#</span></span>
-            <span class="skill-item" tabindex="0" aria-label="C Plus Plus"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.2-6.5l-1.4 1.4A7 7 0 1 0 18.2 17l1.4 1.4A9 9 0 0 1 3 12Zm13-1h2V9h2v2h2v2h-2v2h-2v-2h-2v-2Zm-7 0h2V9h2v2h2v2h-2v2h-2v-2H9v-2Z"/></svg><span class="skill-tooltip">C++</span></span>
-            <span class="skill-item" tabindex="0" aria-label="Java"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6c3 2 1 3-1 4 5 0 8-2 6-5 4 4 1 7-4 8 7 1 9 3 9 5H6c0-2 2-3 5-4-5 0-8-3-3-8Zm-2 14h12v1H6v-1Z"/></svg><span class="skill-tooltip">Java</span></span>
-            <span class="skill-item" tabindex="0" aria-label="JavaScript"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm3 3v7.5c0 2 1 3 3 3 1.8 0 2.8-1 2.8-3V7h-2v7.3c0 .8-.3 1.2-.9 1.2-.6 0-.9-.4-.9-1.2V7H7Zm9 0c-1.8 0-3 1-3 2.6 0 1.5.8 2.3 2.5 3 1 .4 1.3.7 1.3 1.2 0 .5-.4.8-1 .8-.8 0-1.4-.3-2-.8v2.1c.6.4 1.3.6 2.1.6 1.9 0 3.1-1 3.1-2.7 0-1.5-.8-2.4-2.6-3-.9-.4-1.2-.7-1.2-1.1 0-.4.3-.7.9-.7.6 0 1.2.2 1.8.6V7.4c-.5-.3-1.1-.4-1.9-.4Z"/></svg><span class="skill-tooltip">JavaScript</span></span>
-            <span class="skill-item" tabindex="0" aria-label="Python"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.3 0-4 1.8-4 3.4V9h4v2H6.5C4.6 11 3 12.7 3 15s1.6 4 3.5 4H8v-3H6.8c-.7 0-1.3-.5-1.3-1.2s.6-1.2 1.3-1.2H12c2.1 0 4-1.7 4-4V6.4C16 4.2 14.2 3 12 3Zm-1.5 2h3v2h-3V5Zm1.5 16c3.3 0 4-1.8 4-3.4V15h-4v-2h5.5c1.9 0 3.5-1.7 3.5-4s-1.6-4-3.5-4H16v3h1.2c.7 0 1.3.5 1.3 1.2s-.6 1.2-1.3 1.2H12c-2.1 0-4 1.7-4 4v3.4c0 2.2 1.8 3.4 4 3.4Zm1.5-2h-3v-2h3v2Z"/></svg><span class="skill-tooltip">Python</span></span>
-            <span class="skill-item" tabindex="0" aria-label="Node.js"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8.7 5v10L12 22l-8.7-5V7L12 2Zm0 2.3L5.3 8.2v7.6l6.7 3.9 6.7-3.9V8.2L12 4.3Zm-1.1 4h2.2v6.3c0 .9-.5 1.4-1.4 1.4-.7 0-1.3-.3-1.8-.8l-1.2 1.3c.8.8 1.8 1.3 3.1 1.3 2 0 3.3-1.2 3.3-3.1V8.3h-2.2v4.4c0 .6-.3.9-.8.9-.4 0-.7-.2-1-.5l-1.2 1.2c.5.5 1.1.8 1.8.8.7 0 1.3-.2 1.7-.6"/></svg><span class="skill-tooltip">Node.js</span></span>
-            <span class="skill-item" tabindex="0" aria-label="HTML and CSS"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 1.5 17L12 22l6.5-2.1L20 3H4Zm12.9 4H7.1l.2 2h9.4l-.3 3H7.6l.2 2h6.4l-.3 3.8-2 .6-2-.6-.1-1.8H8l.2 3.1 3.8 1.2 3.8-1.2L17 7h-.1Z"/></svg><span class="skill-tooltip">HTML / CSS</span></span>
-            <span class="skill-item" tabindex="0" aria-label="Apache2"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.7 0-6.5 3.1-6.5 7.2 0 2.1.8 4 2.1 5.4L4 20h3l2-2.8c.9.4 1.9.6 3 .6s2.1-.2 3-.6L17 20h3l-3.6-4.4c1.3-1.4 2.1-3.3 2.1-5.4C18.5 6.1 15.7 3 12 3Zm-3 6h2v2H9V9Zm4 0h2v2h-2V9Zm-4.5 5.2c1 .6 2.2.9 3.5.9s2.5-.3 3.5-.9c-.7 1-1.8 1.6-3.5 1.6s-2.8-.6-3.5-1.6Z"/></svg><span class="skill-tooltip">Apache2</span></span>
-            <span class="skill-item" tabindex="0" aria-label="Docker"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h3V7h3v3h3V7h3v3h3v2H3v1c0 2.8 2.2 5 5 5h7c2.1 0 3.8-1.2 4.6-3 .8.2 1.6.2 2.4-.1-.7 2.8-3.2 5.1-6.3 5.1H8a7 7 0 0 1-7-7v-1h2V10Z"/></svg><span class="skill-tooltip">Docker</span></span>
-            <span class="skill-item" tabindex="0" aria-label="Linux"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-2.1 0-3 2.2-3 4.5 0 1.4-.6 2.8-1.4 4.1C6.6 13 5 14.5 5 17c0 2.2 1.8 3 4 3 .9 0 1.9-.3 3-.3s2.1.3 3 .3c2.2 0 4-.8 4-3 0-2.5-1.6-4-2.6-5.4C15.6 10.3 15 8.9 15 7.5 15 5.2 14.1 3 12 3Zm-3 12c.7 0 1.2.5 1.2 1.2S9.7 17.4 9 17.4s-1.2-.5-1.2-1.2S8.3 15 9 15Zm6 0c.7 0 1.2.5 1.2 1.2s-.5 1.2-1.2 1.2-1.2-.5-1.2-1.2S14.3 15 15 15Z"/></svg><span class="skill-tooltip">Linux</span></span>
+            <span class="skill-item" tabindex="0" aria-label="C Sharp">
+              <svg class="skill-icon skill-icon--csharp" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path d="M27.6947 22.9999C27.883 22.6617 28 22.2807 28 21.9385V10.0613C28 9.71913 27.8831 9.33818 27.6947 9L16 16L27.6947 22.9999Z" fill="#b8c8ee"/>
+                <path d="M17.0395 29.7433L26.9611 23.8047C27.2469 23.6336 27.5067 23.3382 27.695 23L16.0003 16L4.30566 23C4.49398 23.3382 4.75382 23.6337 5.03955 23.8047L14.9611 29.7433C15.5326 30.0855 16.468 30.0855 17.0395 29.7433Z" fill="#b8c8ee"/>
+                <path d="M27.6947 8.99996C27.5064 8.6617 27.2465 8.36629 26.9608 8.19521L17.0392 2.25662C16.4677 1.91446 15.5323 1.91446 14.9608 2.25662L5.03922 8.19521C4.46761 8.53729 4 9.37709 4 10.0613V21.9386C4 22.2807 4.11694 22.6618 4.30533 23L16 16L27.6947 8.99996Z" fill="#b8c8ee"/>
+                <path d="M16.0385 24C11.6061 24 8 20.4112 8 16C8 11.5888 11.6061 8 16.0385 8C18.8458 8 21.4674 9.47569 22.919 11.8618L19.4765 13.9265C18.7492 12.736 17.4399 12 16.0385 12C13.8222 12 12.0193 13.7944 12.0193 16C12.0193 18.2056 13.8222 20 16.0385 20C17.4362 20 18.7421 19.2681 19.4707 18.0832L22.9205 20.1359C21.4692 22.5234 18.8467 24 16.0385 24Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0001 13V13.9974H22.9999V13H22.0001V13.9974H21V15H22.0001V16.9948H21V18H22.0001V19H22.9999L23 18H25.0001V19H25.9999V18H27V17H25.9999V15H27V13.9974H25.9999V13H25.0001ZM25.0001 17V15H22.9999V16.9948L25.0001 17Z" fill="white"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">C#</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="C Plus Plus">
+              <svg class="skill-icon skill-icon--cplusplus" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path d="M47.593 41.008c.251-.435.407-.925.407-1.365V24.367c0-.44-.156-.93-.407-1.364L32 32.005l15.593 9.003z" fill="#b8c8ee"/>
+                <path d="m33.386 49.68 13.228-7.637c.381-.22.728-.6.979-1.035L32 32.005l-15.593 9.003c.251.435.598.815.979 1.035l13.228 7.637c.762.44 2.01.44 2.772 0z" fill="#b8c8ee"/>
+                <path d="M47.593 23.003c-.251-.436-.598-.815-.979-1.035L33.386 14.33c-.762-.44-2.01-.44-2.772 0l-13.228 7.638c-.762.44-1.386 1.52-1.386 2.4v15.275c0 .44.156.93.407 1.365L32 32.005l15.593-9.002z" fill="#b8c8ee"/>
+                <path d="M32 42.672c-5.882 0-10.667-4.785-10.667-10.667S26.118 21.338 32 21.338c3.795 0 7.335 2.043 9.237 5.33l-4.616 2.672A5.356 5.356 0 0 0 32 26.672a5.34 5.34 0 0 0-5.333 5.333A5.34 5.34 0 0 0 32 37.34a5.356 5.356 0 0 0 4.621-2.669l4.616 2.671A10.705 10.705 0 0 1 32 42.671z" fill="#ffffff"/>
+                <path d="M42.667 31.413H41.48v-1.186h-1.185v1.186h-1.185v1.185h1.185v1.185h1.185v-1.185h1.186v-1.185zM47.111 31.413h-1.185v-1.186H44.74v1.186h-1.185v1.185h1.185v1.185h1.185v-1.185h1.185v-1.185z" fill="#ffffff"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">C++</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="Java">
+              <svg class="skill-icon skill-icon--java" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path d="M16.0497 8.44062C22.6378 3.32607 19.2566 0 19.2566 0C19.7598 5.28738 13.813 6.53583 12.2189 10.1692C11.1312 12.6485 12.9638 14.8193 16.0475 17.5554C15.7749 16.9494 15.3544 16.3606 14.9288 15.7645C13.4769 13.7313 11.9645 11.6132 16.0497 8.44062Z" fill="#b8c8ee"/>
+                <path d="M17.1015 18.677C17.1015 18.677 19.0835 17.0779 17.5139 15.3008C12.1931 9.27186 23.3333 6.53583 23.3333 6.53583C16.5317 9.8125 17.5471 11.7574 19.2567 14.1202C21.0871 16.6538 17.1015 18.677 17.1015 18.677Z" fill="#b8c8ee"/>
+                <path d="M22.937 23.4456C29.0423 20.3258 26.2195 17.3278 24.2492 17.7317C23.7662 17.8305 23.5509 17.9162 23.5509 17.9162C23.5509 17.9162 23.7302 17.64 24.0726 17.5204C27.9705 16.1729 30.9682 21.4949 22.8143 23.6028C22.8143 23.6029 22.9088 23.5198 22.937 23.4456Z" fill="#b8c8ee"/>
+                <path d="M10.233 19.4969C6.41312 18.9953 12.3275 17.6139 12.3275 17.6139C12.3275 17.6139 10.0307 17.4616 7.20592 18.8043C3.86577 20.3932 15.4681 21.1158 21.474 19.5625C22.0984 19.1432 22.9614 18.7798 22.9614 18.7798C22.9614 18.7798 20.5037 19.2114 18.0561 19.4145C15.0612 19.6612 11.8459 19.7093 10.233 19.4969Z" fill="#b8c8ee"/>
+                <path d="M11.6864 22.4758C9.55624 22.2592 10.951 21.2439 10.951 21.2439C5.43898 23.0429 14.0178 25.083 21.7199 22.8682C20.9012 22.5844 20.3806 22.0653 20.3806 22.0653C16.6163 22.7781 14.441 22.7553 11.6864 22.4758Z" fill="#b8c8ee"/>
+                <path d="M12.6145 25.6991C10.486 25.4585 11.7295 24.7474 11.7295 24.7474C6.72594 26.1222 14.7729 28.9625 21.1433 26.2777C20.0999 25.8787 19.3528 25.4181 19.3528 25.4181C16.5111 25.9469 15.1931 25.9884 12.6145 25.6991Z" fill="#b8c8ee"/>
+                <path d="M25.9387 27.3388C25.9387 27.3388 26.8589 28.0844 24.9252 28.6612C21.2481 29.7566 9.62093 30.0874 6.39094 28.7049C5.22984 28.2082 7.40723 27.5189 8.09215 27.3742C8.80646 27.2219 9.21466 27.2503 9.21466 27.2503C7.9234 26.3558 0.868489 29.0067 5.63111 29.7659C18.6195 31.8372 29.3077 28.8331 25.9387 27.3388Z" fill="#b8c8ee"/>
+                <path d="M28 28.9679C27.7869 31.6947 18.7877 32.2683 12.9274 31.8994C9.10432 31.6583 8.33812 31.0558 8.32691 31.047C11.9859 31.6402 18.1549 31.7482 23.1568 30.8225C27.5903 30.0016 28 28.9679 28 28.9679Z" fill="#b8c8ee"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">Java</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="JavaScript">
+              <svg class="skill-icon skill-icon--javascript" viewBox="0 0 512 512" fill="#ffffff" stroke="#ffffff" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <rect width="512" height="512" rx="15%" fill="#b8c8ee"/>
+                <path d="M324 370c10 17 24 29 47 29c20 0 33-10 33 -24c0-16 -13 -22 -35 -32l-12-5c-35-15 -58 -33 -58 -72c0-36 27 -64 70 -64c31 0 53 11 68 39l-37 24c-8-15 -17 -21 -31 -21c-14 0-23 9 -23 21c0 14 9 20 30 29l12 5c41 18 64 35 64 76c0 43-34 67 -80 67c-45 0-74 -21 -88 -49zm-170 4c8 13 14 25 31 25c16 0 26-6 26 -30V203h48v164c0 50-29 72 -72 72c-39 0-61 -20 -72 -44z"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">JavaScript</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="Python">
+              <svg class="skill-icon skill-icon--python" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0164 2C10.8193 2 9.03825 3.72453 9.03825 5.85185V8.51852H15.9235V9.25926H5.97814C3.78107 9.25926 2 10.9838 2 13.1111L2 18.8889C2 21.0162 3.78107 22.7407 5.97814 22.7407H8.27322V19.4815C8.27322 17.3542 10.0543 15.6296 12.2514 15.6296H19.5956C21.4547 15.6296 22.9617 14.1704 22.9617 12.3704V5.85185C22.9617 3.72453 21.1807 2 18.9836 2H13.0164ZM12.0984 6.74074C12.8589 6.74074 13.4754 6.14378 13.4754 5.40741C13.4754 4.67103 12.8589 4.07407 12.0984 4.07407C11.3378 4.07407 10.7213 4.67103 10.7213 5.40741C10.7213 6.14378 11.3378 6.74074 12.0984 6.74074Z" fill="url(#paint0_linear_87_8204)"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9834 30C21.1805 30 22.9616 28.2755 22.9616 26.1482V23.4815L16.0763 23.4815L16.0763 22.7408L26.0217 22.7408C28.2188 22.7408 29.9998 21.0162 29.9998 18.8889V13.1111C29.9998 10.9838 28.2188 9.25928 26.0217 9.25928L23.7266 9.25928V12.5185C23.7266 14.6459 21.9455 16.3704 19.7485 16.3704L12.4042 16.3704C10.5451 16.3704 9.03809 17.8296 9.03809 19.6296L9.03809 26.1482C9.03809 28.2755 10.8192 30 13.0162 30H18.9834ZM19.9015 25.2593C19.1409 25.2593 18.5244 25.8562 18.5244 26.5926C18.5244 27.329 19.1409 27.9259 19.9015 27.9259C20.662 27.9259 21.2785 27.329 21.2785 26.5926C21.2785 25.8562 20.662 25.2593 19.9015 25.2593Z" fill="url(#paint1_linear_87_8204)"/>
+                <defs>
+                <linearGradient id="paint0_linear_87_8204" x1="12.4809" y1="2" x2="12.4809" y2="22.7407" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#b8c8ee"/>
+                <stop offset="1" stop-color="#b8c8ee"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_87_8204" x1="19.519" y1="9.25928" x2="19.519" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#b8c8ee"/>
+                <stop offset="1" stop-color="#b8c8ee"/>
+                </linearGradient>
+                </defs>
+                </g>
+              </svg>
+              <span class="skill-tooltip">Python</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="HTML">
+              <svg class="skill-icon skill-icon--html" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#b8c8ee"/>
+                <path d="M26 5H16V29.5L24 27L26 5Z" fill="#b8c8ee"/>
+                <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">HTML</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="CSS">
+              <svg class="skill-icon skill-icon--css" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#b8c8ee"/>
+                <path d="M26 5H16V29.5L24 27L26 5Z" fill="#b8c8ee"/>
+                <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">CSS</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="Docker">
+              <svg class="skill-icon skill-icon--docker" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path fill="#b8c8ee" d="M12.342 4.536l.15-.227.262.159.116.083c.28.216.869.768.996 1.684.223-.04.448-.06.673-.06.534 0 .893.124 1.097.227l.105.057.068.045.191.156-.066.2a2.044 2.044 0 01-.47.73c-.29.299-.8.652-1.609.698l-.178.005h-.148c-.37.977-.867 2.078-1.702 3.066a7.081 7.081 0 01-1.74 1.488 7.941 7.941 0 01-2.549.968c-.644.125-1.298.187-1.953.185-1.45 0-2.73-.288-3.517-.792-.703-.449-1.243-1.182-1.606-2.177a8.25 8.25 0 01-.461-2.83.516.516 0 01.432-.516l.068-.005h10.54l.092-.007.149-.016c.256-.034.646-.11.92-.27-.328-.543-.421-1.178-.268-1.854a3.3 3.3 0 01.3-.81l.108-.187zM2.89 5.784l.04.007a.127.127 0 01.077.082l.006.04v1.315l-.006.041a.127.127 0 01-.078.082l-.039.006H1.478a.124.124 0 01-.117-.088l-.007-.04V5.912l.007-.04a.127.127 0 01.078-.083l.039-.006H2.89zm1.947 0l.039.007a.127.127 0 01.078.082l.006.04v1.315l-.007.041a.127.127 0 01-.078.082l-.039.006H3.424a.125.125 0 01-.117-.088L3.3 7.23V5.913a.13.13 0 01.085-.123l.039-.007h1.413zm1.976 0l.039.007a.127.127 0 01.077.082l.007.04v1.315l-.007.041a.127.127 0 01-.078.082l-.039.006H5.4a.124.124 0 01-.117-.088l-.006-.04V5.912l.006-.04a.127.127 0 01.078-.083l.039-.006h1.413zm1.952 0l.039.007a.127.127 0 01.078.082l.007.04v1.315a.13.13 0 01-.085.123l-.04.006H7.353a.124.124 0 01-.117-.088l-.006-.04V5.912l.006-.04a.127.127 0 01.078-.083l.04-.006h1.412zm1.97 0l.039.007a.127.127 0 01.078.082l.006.04v1.315a.13.13 0 01-.085.123l-.039.006H9.322a.124.124 0 01-.117-.088l-.006-.04V5.912l.006-.04a.127.127 0 01.078-.083l.04-.006h1.411zM4.835 3.892l.04.007a.127.127 0 01.077.081l.007.041v1.315a.13.13 0 01-.085.123l-.039.007H3.424a.125.125 0 01-.117-.09l-.007-.04V4.021a.13.13 0 01.085-.122l.039-.007h1.412zm1.976 0l.04.007a.127.127 0 01.077.081l.007.041v1.315a.13.13 0 01-.085.123l-.039.007H5.4a.125.125 0 01-.117-.09l-.006-.04V4.021l.006-.04a.127.127 0 01.078-.082l.039-.007h1.412zm1.953 0c.054 0 .1.037.117.088l.007.041v1.315a.13.13 0 01-.085.123l-.04.007H7.353a.125.125 0 01-.117-.09l-.006-.04V4.021l.006-.04a.127.127 0 01.078-.082l.04-.007h1.412zm0-1.892c.054 0 .1.037.117.088l.007.04v1.316a.13.13 0 01-.085.123l-.04.006H7.353a.124.124 0 01-.117-.088l-.006-.04V2.128l.006-.04a.127.127 0 01.078-.082L7.353 2h1.412z"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">Docker</span>
+            </span>
+            <span class="skill-item" tabindex="0" aria-label="Linux">
+              <svg class="skill-icon skill-icon--linux" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <g stroke-width="0"/>
+                <g stroke-linecap="round" stroke-linejoin="round"/>
+                <g>
+                <path fill="#b8c8ee" d="M13.338 12.033c-.1-.112-.146-.319-.197-.54-.05-.22-.107-.457-.288-.61v-.001a.756.756 0 00-.223-.134c.252-.745.153-1.487-.1-2.157-.312-.823-.855-1.54-1.27-2.03-.464-.586-.918-1.142-.91-1.963.014-1.254.138-3.579-2.068-3.582-.09 0-.183.004-.28.012-2.466.198-1.812 2.803-1.849 3.675-.045.638-.174 1.14-.613 1.764-.515.613-1.24 1.604-1.584 2.637-.162.487-.24.984-.168 1.454-.023.02-.044.041-.064.063-.151.161-.263.357-.388.489-.116.116-.282.16-.464.225-.183.066-.383.162-.504.395v.001a.702.702 0 00-.077.339c0 .108.016.217.032.322.034.22.068.427.023.567-.144.395-.163.667-.061.865.102.199.31.286.547.335.473.1 1.114.075 1.619.342l.043-.082-.043.082c.54.283 1.089.383 1.526.284a.99.99 0 00.706-.552c.342-.002.717-.146 1.318-.18.408-.032.918.145 1.503.113a.806.806 0 00.068.183l.001.001c.227.455.65.662 1.1.627.45-.036.928-.301 1.315-.762l-.07-.06.07.06c.37-.448.982-.633 1.388-.878.203-.123.368-.276.38-.499.013-.222-.118-.471-.418-.805z"/>
+                <path fill="#b8c8ee" d="M13.571 12.828c-.007.137-.107.24-.29.35-.368.222-1.019.414-1.434.918-.362.43-.802.665-1.19.696-.387.03-.721-.13-.919-.526v-.002c-.123-.233-.072-.6.031-.987s.251-.785.271-1.108v-.001c.02-.415.044-.776.114-1.055.07-.28.179-.468.373-.575a.876.876 0 01.027-.014c.022.359.2.725.514.804.343.09.838-.204 1.047-.445l.122-.004c.184-.005.337.006.495.143v.001c.121.102.179.296.229.512.05.217.09.453.239.621.287.32.38.534.371.672zM6.592 13.843v.003c-.034.435-.28.672-.656.758-.377.086-.888 0-1.398-.266-.565-.3-1.237-.27-1.667-.36-.216-.045-.357-.113-.421-.238-.064-.126-.066-.345.071-.72v-.001l.001-.002c.068-.209.018-.438-.015-.653-.033-.214-.049-.41.024-.546l.001-.001c.094-.181.232-.246.403-.307.17-.062.373-.11.533-.27l.001-.001h.001c.148-.157.26-.353.39-.492.11-.117.22-.195.385-.196h.005a.61.61 0 01.093.008c.22.033.411.187.596.437l.533.971v.001c.142.296.441.622.695.954.254.333.45.666.425.921z"/>
+                <path fill="#b8c8ee" d="M9.25 4.788c-.043-.084-.13-.164-.28-.225-.31-.133-.444-.142-.617-.254-.28-.181-.513-.244-.706-.244a.834.834 0 00-.272.047c-.236.08-.392.25-.49.342-.02.019-.044.035-.104.08-.06.043-.15.11-.28.208-.117.086-.154.2-.114.332.04.132.167.285.4.417h.001c.145.085.244.2.358.291a.801.801 0 00.189.117c.072.031.156.052.26.058.248.015.43-.06.59-.151.16-.092.296-.204.452-.255h.001c.32-.1.548-.301.62-.493a.324.324 0 00-.008-.27z"/>
+                <path fill="#b8c8ee" d="M8.438 5.26c-.255.133-.552.294-.869.294-.316 0-.566-.146-.745-.289-.09-.07-.163-.142-.218-.193-.096-.075-.084-.181-.045-.178.066.008.076.095.117.134.056.052.126.12.211.187.17.135.397.266.68.266.284 0 .614-.166.816-.28.115-.064.26-.179.379-.266.09-.067.087-.147.162-.138.075.009.02.089-.085.18-.105.092-.27.214-.403.283z"/>
+                <path fill="#ffffff" d="M12.337 10.694a1.724 1.724 0 00-.104 0h-.01c.088-.277-.106-.48-.621-.713-.534-.235-.96-.212-1.032.265-.005.025-.009.05-.011.076a.801.801 0 00-.12.054c-.252.137-.389.386-.465.692-.076.305-.098.674-.119 1.09-.013.208-.099.49-.186.79-.875.624-2.09.894-3.122.19-.07-.11-.15-.22-.233-.328a13.85 13.85 0 00-.16-.205.65.65 0 00.268-.05.34.34 0 00.186-.192c.063-.17 0-.408-.202-.68-.201-.273-.542-.58-1.043-.888-.368-.23-.574-.51-.67-.814-.097-.305-.084-.635-.01-.96.143-.625.51-1.233.743-1.614.063-.046.023.086-.236.567-.232.44-.667 1.455-.072 2.248.016-.564.15-1.14.377-1.677.329-.747 1.018-2.041 1.072-3.073.029.02.125.086.169.11.126.075.221.184.344.283a.85.85 0 00.575.2c.24 0 .427-.079.582-.168.17-.096.304-.204.433-.245.27-.085.486-.235.608-.41.21.83.7 2.027 1.014 2.611.167.31.5.969.643 1.762.091-.002.191.01.299.038.375-.973-.319-2.022-.636-2.314-.128-.124-.135-.18-.07-.177.343.304.795.917.96 1.608.075.315.09.646.01.973.04.017.08.034.12.054.603.293.826.548.719.897z"/>
+                <path fill="#b8c8ee" d="M8.04 8.062c-.556.002-1.099.251-1.558.716-.46.464-.814 1.122-1.018 1.888l.061.038v.004c.47.298.805.598 1.012.878.219.296.316.584.223.834a.513.513 0 01-.27.283l-.041.015c.074.097.146.197.213.3.944.628 2.042.396 2.867-.172.08-.278.153-.536.163-.698.021-.415.042-.792.124-1.12.082-.33.242-.63.544-.795.017-.01.034-.015.051-.023a.756.756 0 01.022-.094c-.242-.622-.591-1.14-1.01-1.5-.42-.36-.897-.551-1.382-.554zm2.37 2.155l-.002.005v-.002l.001-.004z"/>
+                <path fill="#ffffff" d="M9.278 3.833a1.05 1.05 0 01-.215.656 4.119 4.119 0 00-.218-.09l-.127-.045c.029-.035.085-.075.107-.127a.669.669 0 00.05-.243l.001-.01a.673.673 0 00-.035-.236.434.434 0 00-.108-.184.223.223 0 00-.156-.07H8.57a.228.228 0 00-.151.06.434.434 0 00-.122.175.676.676 0 00-.05.243v.01a.718.718 0 00.009.14 1.773 1.773 0 00-.354-.12 1.196 1.196 0 01-.01-.133v-.013a1.035 1.035 0 01.088-.447.793.793 0 01.25-.328.554.554 0 01.346-.123h.006c.125 0 .232.036.342.116a.78.78 0 01.257.324c.063.138.094.273.097.433l.001.012zM7.388 3.997a1.05 1.05 0 00-.277.125.623.623 0 00.002-.15v-.008a.651.651 0 00-.048-.192.37.37 0 00-.096-.141.158.158 0 00-.119-.045c-.042.004-.077.024-.11.065a.372.372 0 00-.07.156.626.626 0 00-.013.205v.008a.634.634 0 00.048.193.367.367 0 00.116.156l-.102.08-.078.056a.706.706 0 01-.16-.24c-.053-.12-.082-.24-.09-.381v-.001a1.071 1.071 0 01.045-.39.668.668 0 01.167-.292.359.359 0 01.264-.118c.084 0 .158.028.235.09a.68.68 0 01.199.271c.053.12.08.24.089.382v.001c.003.06.003.115-.002.17z"/>
+                <path fill="#b8c8ee" d="M7.806 4.335c.01.034.065.029.097.045.027.014.05.045.08.046.03.001.076-.01.08-.04.005-.038-.052-.063-.088-.077-.047-.019-.107-.028-.151-.003-.01.005-.021.018-.018.03zM7.484 4.335c-.01.034-.065.029-.096.045-.028.014-.05.045-.081.046-.03.001-.076-.01-.08-.04-.005-.038.052-.063.088-.077.047-.019.108-.028.152-.003.01.005.02.018.017.03z"/>
+                </g>
+              </svg>
+              <span class="skill-tooltip">Linux</span>
+            </span>
           </div>
         </div>
 
         <aside class="work-panel" data-i18n-aria-label="about.workAria" aria-label="Work style">
-          <p class="section-label" data-i18n="about.workLabel">Work style</p>
-          <h3 data-i18n="about.workHeading">Plan calmly. Build clearly.</h3>
-          <p class="work-panel__text" data-i18n="about.workText">From browser extensions such as CR-Toolkit and Minecraft plugins to the Raspberry Pi prototype GRS-v1: I test ideas in practice, connect software with real hardware, and shape projects into useful tools step by step.</p>
+          <p class="section-label" data-i18n="about.workLabel">Bugs sind Features!</p>
+          <h3 data-i18n="about.workHeading">Find bugs. Build better features.</h3>
+          <p class="work-panel__text" data-i18n="about.workText">I test ideas in practice, learn from every bug, and turn unexpected behavior into useful solutions. From browser extensions and Minecraft plugins to hardware prototypes, every project improves through iteration.</p>
         </aside>
       </div>
     </section>
@@ -102,14 +248,14 @@
         <h2 data-i18n="projects.heading">Selected projects</h2>
         <div class="project-grid">
           <a class="project-card project-card--grs" href="projects.html#grs-v1">
-            <img src="src/img/projects/grs/vl_01.png" data-i18n-alt="projects.grsAlt" alt="GamesRadioStation preview">
+            <img src="src/img/projects/grs/pt_01.webp" data-i18n-alt="projects.grsAlt" alt="GamesRadioStation preview" loading="lazy" decoding="async">
             <div class="project-card__content">
               <h3>GamesRadioStation</h3>
               <span class="project-card__cta" data-i18n="projects.view">View project</span>
             </div>
           </a>
           <a class="project-card project-card--ttv" href="projects.html#ttvnotifyme">
-            <img src="src/img/projects/ttvnotifyme/bel_01.png" data-i18n-alt="projects.ttvAlt" alt="TTVNotifyMe preview">
+            <img src="src/img/projects/ttvnotifyme/bel_01.webp" data-i18n-alt="projects.ttvAlt" alt="TTVNotifyMe preview" loading="lazy" decoding="async">
             <div class="project-card__content">
               <h3>TTVNotifyMe</h3>
               <span class="project-card__cta" data-i18n="projects.view">View project</span>
@@ -124,18 +270,18 @@
         <p class="section-label" data-i18n="projects.discover">Discover more</p>
         <h2 data-i18n="projects.allHeading">All projects</h2>
         <div class="category-grid">
-          <a class="category-card category-github" href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer">
-            <img src="src/img/projects/bg_github.png" data-i18n-alt="projects.githubAlt" alt="GitHub projects">
+          <a class="category-card category-github" href="https://github.com/DarkPlugins" target="_blank" rel="noopener noreferrer">
+            <img src="src/img/projects/ptgh_large.webp" data-i18n-alt="projects.githubAlt" alt="GitHub projects" loading="lazy" decoding="async">
             <span>GitHub</span>
             <small data-i18n="projects.githubSmall">Code &amp; open source</small>
           </a>
-          <a class="category-card category-spigot" href="https://www.spigotmc.org/" target="_blank" rel="noreferrer">
-            <img src="src/img/projects/bg_spigotmc.png" data-i18n-alt="projects.spigotAlt" alt="SpigotMC projects">
+          <a class="category-card category-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noopener noreferrer">
+            <img src="src/img/projects/ptp_large.webp" data-i18n-alt="projects.spigotAlt" alt="SpigotMC projects" loading="lazy" decoding="async">
             <span>SpigotMC</span>
             <small data-i18n="projects.spigotSmall">Minecraft plugins</small>
           </a>
           <a class="category-card category-all-projects" href="projects.html">
-            <img src="src/img/projects/bg_labs.png" data-i18n-alt="projects.allAlt" alt="View all projects">
+            <img src="src/img/projects/ptap_large.webp" data-i18n-alt="projects.allAlt" alt="View all projects" loading="lazy" decoding="async">
             <span data-i18n="projects.allHeading">All projects</span>
             <small data-i18n="projects.allSmall">Complete overview</small>
           </a>
@@ -149,11 +295,11 @@
         <h2 id="contact-heading" data-i18n="contact.heading">Let's write.</h2>
         <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" data-i18n-aria-label="contact.copyEmail" aria-label="Copy email address">contact@darkplugins.de</a>
         <div class="contact-links" data-i18n-aria-label="contact.linksAria" aria-label="Direct links">
-          <a href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
+          <a href="https://github.com/darkplugins" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
             <span>GitHub</span>
           </a>
-          <a href="https://www.spigotmc.org/" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
+          <a href="https://www.spigotmc.org/resources/ads-chat-advertising-with-teleport.114097/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v5H9v3h8v5H9v5H5V3Zm4 5h6V6H9v2Zm0 8h4v-2H9v2Z"/></svg>
             <span>SpigotMC</span>
           </a>

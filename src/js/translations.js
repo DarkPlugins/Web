@@ -18,7 +18,8 @@
         about: "About",
         projects: "Projects",
         allProjects: "All projects",
-        contact: "Contact"
+        contact: "Contact",
+        skipToContent: "Skip to content"
       },
       language: {
         label: "Language",
@@ -35,13 +36,13 @@
         heading: "Code with a clear purpose.",
         paragraph1: "I build, test, and publish personal software projects — from browser extensions and small web tools to Minecraft plugins and Raspberry Pi prototypes.",
         paragraph2: "On GitHub, these become useful tools such as CR-Toolkit and TTVNotifyMe, as well as experiments like the Game Radio Station. Every project is a chance to make an idea tangible and learn something new along the way.",
-        paragraph3: "My focus is JavaScript, Node.js, Python, and Java — always with an eye for clear interfaces, working systems, and solutions that help in everyday use.",
+        paragraph3: "My focus is Java, C# (mainly at work), and JavaScript.",
         skills: "Skills",
         technologiesAria: "Technologies",
-        workAria: "Work style",
-        workLabel: "Work style",
-        workHeading: "Plan calmly. Build clearly.",
-        workText: "From browser extensions such as CR-Toolkit and Minecraft plugins to the Raspberry Pi prototype GRS-v1: I test ideas in practice, connect software with real hardware, and shape projects into useful tools step by step."
+        workAria: "Bugs sind Features!",
+        workLabel: "Bugs sind Features!",
+        workHeading: "Find bugs. Build better features.",
+        workText: "I test ideas in practice, learn from every bug, and turn unexpected behavior into useful solutions. From browser extensions and Minecraft plugins to hardware prototypes, every project improves through iteration."
       },
       projects: {
         sectionAria: "Projects",
@@ -77,7 +78,7 @@
         intro: "Projects from browser development, Minecraft plugins, and hardware prototypes. Not everything is visible on GitHub.",
         theme: "Theme",
         slideAria: "Projects {number}",
-        projectImageAlt: "Placeholder image for {title}",
+        projectImageAlt: "Preview image for {title}",
         viewProject: "View project",
         year: "Year",
         technologies: "Technologies",
@@ -105,6 +106,15 @@
       },
       preloader: {
         loading: "Loading page"
+      },
+      skill: {
+        "Joystick Integration": "Joystick integration"
+      },
+      project: {
+        arcade: {
+          description: "A small arcade machine built as a project with a friend using Node.js, HTML, CSS, JavaScript, and joystick integration.",
+          details: "The source code is not public. There is no download or GitHub repository to take a look at."
+        }
       }
     },
     de: {
@@ -122,7 +132,8 @@
         about: "Über mich",
         projects: "Projekte",
         allProjects: "Alle Projekte",
-        contact: "Kontakt"
+        contact: "Kontakt",
+        skipToContent: "Zum Inhalt springen"
       },
       language: {
         label: "Sprache",
@@ -139,13 +150,13 @@
         heading: "Code mit klarem Zweck.",
         paragraph1: "Ich baue, teste und veröffentliche persönliche Softwareprojekte – von Browser-Erweiterungen und kleinen Web-Tools bis zu Minecraft-Plugins und Raspberry-Pi-Prototypen.",
         paragraph2: "Auf GitHub entstehen daraus praktische Werkzeuge wie CR-Toolkit und TTVNotifyMe, aber auch Experimente wie die Game Radio Station. Jedes Projekt ist eine Gelegenheit, eine Idee greifbar zu machen und dabei etwas Neues zu lernen.",
-        paragraph3: "Mein Schwerpunkt liegt auf JavaScript, Node.js, Python und Java – immer mit Blick auf klare Bedienung, funktionierende Systeme und Lösungen, die im Alltag wirklich helfen.",
+        paragraph3: "Mein Schwerpunkt liegt auf Java, C# (eher bei der Arbeit) und JavaScript.",
         skills: "Skills",
         technologiesAria: "Technologien",
-        workAria: "Arbeitsweise",
-        workLabel: "Arbeitsweise",
-        workHeading: "Ruhig planen. Klar umsetzen.",
-        workText: "Von Browser-Erweiterungen wie CR-Toolkit über Minecraft-Plugins bis zum Raspberry-Pi-Prototypen GRS-v1: Ich probiere Ideen praktisch aus, verbinde Software mit echter Hardware und bringe Projekte Schritt für Schritt in eine nutzbare Form."
+        workAria: "Bugs sind Features!",
+        workLabel: "Bugs sind Features!",
+        workHeading: "Bugs finden. Bessere Features bauen.",
+        workText: "Ich probiere Ideen praktisch aus, lerne aus jedem Bug und mache aus unerwartetem Verhalten brauchbare Lösungen. Von Browser-Erweiterungen und Minecraft-Plugins bis zu Hardware-Prototypen wird jedes Projekt durch Iteration besser."
       },
       projects: {
         sectionAria: "Projekte",
@@ -181,7 +192,7 @@
         intro: "Projekte aus Browser-Entwicklung, Minecraft-Plugins und Hardware-Prototypen. Nicht alles ist auf GitHub einsehbar.",
         theme: "Thema",
         slideAria: "Projekte {number}",
-        projectImageAlt: "Platzhalterbild für {title}",
+        projectImageAlt: "Vorschaubild für {title}",
         viewProject: "Projekt ansehen",
         year: "Jahr",
         technologies: "Technologien",
@@ -211,6 +222,7 @@
         loading: "Seite wird geladen"
       },
       skill: {
+        "Joystick Integration": "Joystick-Integration",
         "Browser Extension": "Browser-Erweiterung",
         Notifications: "Benachrichtigungen",
         Media: "Medien",
@@ -263,9 +275,9 @@
           description: "Ein Raspberry-Pi-Prototyp für eine spielbasierte Radio-Station mit Drehencoder, rundem LCD und Audioausgabe.",
           details: "Die Python-Anwendung verwaltet Spiele- und Songauswahl, speichert den Wiedergabestatus, steuert VLC und kann Audio über Bluetooth ausgeben. Das Projekt läuft unter Linux und integriert systemd für den Start beim Booten."
         },
-        projectWebArcade: {
-          description: "Eine kompakte Arcade mit Browser-Spielen, echten Joysticks und Tastern.",
-          details: "Der Launcher verbindet Snake, Pong und Quiz mit einem Node.js-Backend, das Hardware-Eingaben über WebSockets an die Weboberfläche weitergibt."
+        arcade: {
+          description: "Als Projektarbeit mit einem Freund entstand eine kleine Arcademaschine mit Node.js, HTML, CSS, JavaScript und Joystick-Integration.",
+          details: "Der Quellcode ist nicht öffentlich verfügbar. Es gibt keinen Download und kein GitHub-Repository zum Anschauen."
         },
         energyAnalyzer10: {
           description: "Eine Desktop-Anwendung zur Analyse erneuerbarer Energiedaten aus der SMARD-API.",
@@ -347,7 +359,7 @@
     "verifybot": "verifybot",
     "ads": "ads",
     "grs-v1": "grsV1",
-    "project-web-arcade": "projectWebArcade",
+    arcade: "arcade",
     "energy-analyzer-1-0": "energyAnalyzer10"
   }[slug] ?? slug);
 

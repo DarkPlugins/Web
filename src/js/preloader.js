@@ -2,29 +2,22 @@
   const preloader = document.querySelector("[data-preloader]");
   if (!preloader) return;
 
-  const imageSources = [
-    "src/img/logo_large.png",
-    "src/img/pfi/01.png",
-    "src/img/pfi/02.png",
-    "src/img/pfi/03.png",
-    "src/img/pfi/04.png",
-    "src/img/pfi/05.png",
-    "src/img/pfi/06.png",
-    "src/img/pfi/07.png",
-    "src/img/pfi/original.png",
-    "src/img/projects/bg_github.png",
-    "src/img/projects/bg_labs.png",
-    "src/img/projects/bg_spigotmc.png",
-    "src/img/projects/featured_1.png",
-    "src/img/projects/featured_2.png",
-    "src/img/projects/grs/vl_01.png"
+  const criticalSources = [
+    "src/img/logo.webp",
+    "src/img/logo128.webp",
+    "src/img/pfi/01.webp",
+    "src/img/pfi/02.webp",
+    "src/img/pfi/03.webp",
+    "src/img/pfi/04.webp",
+    "src/img/pfi/05.webp",
+    "src/img/pfi/06.webp",
+    "src/img/pfi/07.webp"
   ];
-
-  const projectImages = Array.isArray(window.PROJECTS)
-    ? window.PROJECTS.map((project) => project.image).filter(Boolean)
-    : [];
-  const pageImages = Array.from(document.images, (image) => image.currentSrc || image.src);
-  const sources = [...new Set([...imageSources, ...projectImages, ...pageImages])];
+  const pageSources = Array.from(document.images)
+    .filter((image) => image.loading !== "lazy")
+    .map((image) => image.currentSrc || image.src)
+    .filter(Boolean);
+  const sources = [...new Set([...criticalSources, ...pageSources])];
 
   const waitForImage = (source) => new Promise((resolve) => {
     const image = new Image();

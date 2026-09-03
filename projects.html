@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" data-i18n-content="meta.projectsDescription">
+    <meta name="description" content="DarkPlugins portfolio featuring Java, C#, JavaScript and Node.js projects, web tools, browser extensions, Minecraft plugins and Raspberry Pi prototypes.">
+    <meta name="keywords" content="DarkPlugins, software engineer, software portfolio, Java, C#, JavaScript, Node.js, HTML, CSS, web development, browser extensions, Minecraft plugins, SpigotMC, Raspberry Pi, Linux, hardware prototypes, arcade machine, desktop applications">
+    <meta name="theme-color" content="#081229">
     <title data-i18n="meta.projectsTitle">All projects · DarkPlugins</title>
+    <link rel="icon" type="image/webp" sizes="128x128" href="src/img/logo128.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,13 +16,38 @@
     <link rel="stylesheet" href="src/css/preloader.css">
     <link rel="stylesheet" href="src/css/notifications.css">
   </head>
+  <!--
+            .__....._             _.....__,
+              .": o :':         ;': o :".
+              `. `-' .'.       .'. `-' .'
+                `---'             `---'
+
+      _...----...      ...   ...      ...----..._
+  .-'__..-""'----    `.  `"`  .'    ----'""-..__`-.
+  '.-'   _.--"""'       `-._.-'       '"""--._   `-.`
+  '  .-"'                  :                  `"-.  `
+    '   `.              _.'"'._              .'   `
+          `.       ,.-'"       "'-.,       .'
+            `.                           .'
+              `-._                   _.-'
+                  `"'--...___...--'"`
+
+
+  __        __ _           _                       _   
+  \ \      / /| |__   __ _| |_ ___    _   _ _ __ | |  
+    \ \ /\ / / | '_ \ / _` | __/ __|  | | | | '_ \| |  
+    \ V  V /  | | | | (_| | |_\__ \  | |_| | |_) |_|  
+      \_/\_/   |_| |_|\__,_|\__|___/   \__,_| .__/(_)  
+                                              |_|        
+  -->                                       
   <body class="projects-page is-loading">
     <div class="preloader" data-preloader role="status" data-i18n-aria-label="preloader.loading" aria-label="Loading page">
-      <img class="preloader__logo" src="src/img/logo128.png" alt="DarkPlugins">
+      <img class="preloader__logo" src="src/img/logo128.webp" alt="DarkPlugins" width="128" height="128" decoding="async">
     </div>
+    <a class="skip-link" href="#home" data-i18n="nav.skipToContent">Skip to content</a>
     <header class="site-header">
       <a class="logo" href="index.html#home" data-i18n-aria-label="nav.homeAria" aria-label="Go to home">
-        <img src="src/img/logo.png" alt="DarkPlugins Logo">
+        <img src="src/img/logo.webp" alt="DarkPlugins Logo" width="280" height="280" decoding="async">
       </a>
       <details class="menu">
         <summary data-i18n-aria-label="nav.openMenu" aria-label="Open menu"><span></span><span></span></summary>
@@ -56,11 +84,11 @@
         <h2 id="contact-heading" data-i18n="contact.heading">Let's write.</h2>
         <a class="contact-mail" href="mailto:contact@darkplugins.de" data-copy-text="contact@darkplugins.de" data-i18n-aria-label="contact.copyEmail" aria-label="Copy email address">contact@darkplugins.de</a>
         <div class="contact-links" data-i18n-aria-label="contact.linksAria" aria-label="Direct links">
-          <a href="https://github.com/DarkPlugins" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
+          <a href="https://www.spigotmc.org/resources/ads-chat-advertising-with-teleport.114097/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="contact.githubAria" aria-label="Open GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
             <span>GitHub</span>
           </a>
-          <a href="https://www.spigotmc.org/" target="_blank" rel="noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
+          <a href="https://www.spigotmc.org/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="contact.spigotAria" aria-label="Open SpigotMC">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v5H9v3h8v5H9v5H5V3Zm4 5h6V6H9v2Zm0 8h4v-2H9v2Z"/></svg>
             <span>SpigotMC</span>
           </a>
@@ -73,12 +101,12 @@
       </div>
     </footer>
 
-    <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-project-modal hidden>
+    <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" data-project-modal hidden>
       <button class="modal-close" type="button" data-i18n-aria-label="archive.closeModal" aria-label="Close project" data-modal-close>
         <span></span><span></span>
       </button>
       <div class="project-modal__visual">
-        <img src="src/img/pfi/original.png" alt="" data-modal-image>
+        <img src="src/img/pfi/original.webp" alt="" width="1672" height="940" data-modal-image loading="lazy" decoding="async">
       </div>
       <div class="project-modal__content">
         <p class="section-label" data-modal-theme></p>
@@ -87,16 +115,16 @@
           <span class="project-privacy" data-modal-private data-i18n="archive.privateSource" hidden>Source code private</span>
         </div>
         <h2 id="modal-title" data-modal-title></h2>
-        <p class="project-modal__lead" data-modal-description></p>
+        <p class="project-modal__lead" id="modal-description" data-modal-description></p>
         <p data-modal-details></p>
         <dl>
           <div><dt data-i18n="archive.year">Year</dt><dd data-modal-year></dd></div>
           <div><dt data-i18n="archive.technologies">Technologies</dt><dd><ul data-modal-skills></ul></dd></div>
         </dl>
         <div class="modal-actions">
-          <a class="modal-link" href="https://github.com/" target="_blank" rel="noreferrer" data-i18n="archive.viewProject" data-modal-link>View project</a>
-          <a class="modal-download" href="src/img/pfi/original.png" download="original.png" data-i18n="archive.download" data-modal-download>Download</a>
-          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noreferrer" data-i18n="archive.spigotDownload" data-modal-spigot hidden>Spigot download</a>
+          <a class="modal-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-i18n="archive.viewProject" data-modal-link>View project</a>
+          <a class="modal-download" href="src/img/pfi/original.webp" download="original.webp" data-i18n="archive.download" data-modal-download>Download</a>
+          <a class="modal-spigot" href="https://www.spigotmc.org/resources/authors/nico336611.626286/" target="_blank" rel="noopener noreferrer" data-i18n="archive.spigotDownload" data-modal-spigot hidden>Spigot download</a>
           <span class="modal-source-note" data-modal-source-note data-i18n="archive.sourceUnavailable" hidden>Source code unavailable</span>
         </div>
       </div>
