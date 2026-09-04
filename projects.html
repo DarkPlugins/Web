@@ -65,7 +65,15 @@
           </div>
           <a href="index.html#about">About</a>
           <a href="index.html#projects">Projects</a>
-          <a href="#home">All Projects</a>
+          <div class="menu-projects">
+            <div class="menu-projects__head">
+              <a href="#home">All Projects</a>
+              <button type="button" aria-label="Open project list" aria-controls="project-nav-list" aria-expanded="false" data-project-nav-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg>
+              </button>
+            </div>
+            <div class="menu-projects__list" id="project-nav-list" data-project-nav-list hidden></div>
+          </div>
           <a href="#contact">Contact</a>
         </nav>
       </details>
@@ -76,7 +84,7 @@
         <header class="projects-index__intro">
           <p class="section-label">Archive</p>
           <h1 id="projects-title">All projects</h1>
-          <p>Projects from browser development, Minecraft plugins, and hardware prototypes — not everything is visible on GitHub.</p>
+          <p>Projects from browser development, Minecraft plugins, and hardware prototypes. Not everything is visible on GitHub.</p>
         </header>
         <div class="project-slide__groups project-groups">
           <section class="project-group">

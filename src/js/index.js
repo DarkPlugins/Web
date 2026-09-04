@@ -36,7 +36,7 @@ const resetHomePosition = () => {
 
 resetHomePosition();
 
-window.addEventListener("hashchange", () => scrollToHash("smooth"));
+window.addEventListener("hashchange", () => scrollToHash("auto"));
 window.addEventListener("load", () => {
   if (isReload) {
     resetHomePosition();

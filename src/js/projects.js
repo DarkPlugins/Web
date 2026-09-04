@@ -96,7 +96,9 @@ function openProject(project) {
   modalElements.private.hidden = !project.sourcePrivate;
   modalElements.title.textContent = project.title;
   modalElements.description.textContent = projectText(project, "description");
-  modalElements.details.textContent = projectText(project, "details");
+  const details = projectText(project, "details");
+  modalElements.details.hidden = !details;
+  modalElements.details.textContent = details ?? "";
   modalElements.year.textContent = project.year;
   modalElements.skills.innerHTML = projectSkills(project).map((skill) => `<li>${skill}</li>`).join("");
   modalElements.link.hidden = !project.href;
@@ -126,7 +128,7 @@ function closeProject() {
   document.body.classList.remove("modal-open");
   activeProject = null;
   window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}#home`);
-  document.querySelector("#home")?.scrollIntoView({ behavior: "smooth" });
+  document.querySelector("#home")?.scrollIntoView({ behavior: "auto" });
   previousFocus?.focus({ preventScroll: true });
   previousFocus = null;
 }

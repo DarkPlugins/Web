@@ -65,7 +65,15 @@
           </div>
           <a href="index.html#about">Über mich</a>
           <a href="index.html#projects">Projekte</a>
-          <a href="#home">Alle Projekte</a>
+          <div class="menu-projects">
+            <div class="menu-projects__head">
+              <a href="#home">Alle Projekte</a>
+              <button type="button" aria-label="Projektliste öffnen" aria-controls="project-nav-list" aria-expanded="false" data-project-nav-toggle>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 8 8-8 8"/></svg>
+              </button>
+            </div>
+            <div class="menu-projects__list" id="project-nav-list" data-project-nav-list hidden></div>
+          </div>
           <a href="#contact">Kontakt</a>
         </nav>
       </details>
