@@ -202,16 +202,17 @@ globalThis.PROJECTS = [
     image: "src/img/projects/arcade/pt_01.webp",
     status: "finished",
     statusClass: "finished",
-    sourcePrivate: true,
-    sourceAvailable: false,
+    sourcePrivate: false,
+    sourceAvailable: true,
     description: "A small arcade machine built as a project with a friend using Node.js, HTML, CSS, JavaScript, and joystick integration.",
-    details: "The source code is not public. There is no download or GitHub repository to take a look at.",
+    details: "The source code is public. However, the background videos are not included because they are too large for GitHub.",
     descriptionDe: "Als Projektarbeit mit einem Freund entstand eine kleine Arcademaschine mit Node.js, HTML, CSS, JavaScript und Joystick-Integration.",
-    detailsDe: "Der Quellcode ist nicht öffentlich verfügbar. Es gibt keinen Download und kein GitHub-Repository zum Anschauen.",
+    detailsDe: "Der Quellcode ist öffentlich, allerdings sind die Hintergrundvideos nicht vorhanden, da diese zu groß für Github sind.",
     skills: ["Node.js", "HTML", "CSS", "JavaScript", "Joystick Integration"],
     skillsDe: ["Node.js", "HTML", "CSS", "JavaScript", "Joystick-Integration"],
     year: "2024",
-    href: null
+    href: "https://github.com/DarkPlugins/Arcade",
+    download: "https://github.com/DarkPlugins/Arcade/archive/refs/heads/main.zip"
   },
   {
     slug: "energy-analyzer-1-0",
