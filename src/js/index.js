@@ -54,6 +54,80 @@ const languageSelect = document.querySelector("[data-language-select]");
 const currentLanguage = document.documentElement.lang === "de" ? "de" : "en";
 const languageCookieName = "de.darkplugins.cookie.language";
 
+const titleShine = document.querySelector("[data-title-shine]");
+
+if (titleShine) {
+  const titleText = titleShine.textContent;
+  const titleLetters = Array.from(titleText).map((character) => {
+    const letter = document.createElement("span");
+    letter.className = "page-title__letter";
+    letter.textContent = character === " " ? "\u00a0" : character;
+    return letter;
+  });
+
+  titleShine.replaceChildren(...titleLetters);
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const letterDelay = 240;
+    const shineDuration = 620;
+    const repeatInterval = 10000;
+
+    const runTitleShine = () => {
+      titleLetters.forEach((letter, index) => {
+        window.setTimeout(() => {
+          letter.classList.add("is-shining");
+          window.setTimeout(() => letter.classList.remove("is-shining"), shineDuration);
+        }, index * letterDelay);
+      });
+
+      window.setTimeout(runTitleShine, repeatInterval);
+    };
+
+    window.setTimeout(runTitleShine, 1200);
+  }
+}
+
+const typingText = document.querySelector("[data-typing-text]");
+
+if (typingText && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const text = typingText.textContent;
+  const typingSpeed = 70;
+  const deletingSpeed = 32;
+  const holdDuration = 5000;
+  const restartPause = 450;
+
+  const runTypingCycle = () => {
+    let characterIndex = 0;
+    typingText.textContent = "";
+
+    const typeNextCharacter = () => {
+      if (characterIndex < text.length) {
+        characterIndex += 1;
+        typingText.textContent = text.slice(0, characterIndex);
+        window.setTimeout(typeNextCharacter, typingSpeed);
+        return;
+      }
+
+      window.setTimeout(deleteNextCharacter, holdDuration);
+    };
+
+    const deleteNextCharacter = () => {
+      if (characterIndex > 0) {
+        characterIndex -= 1;
+        typingText.textContent = text.slice(0, characterIndex);
+        window.setTimeout(deleteNextCharacter, deletingSpeed);
+        return;
+      }
+
+      window.setTimeout(runTypingCycle, restartPause);
+    };
+
+    typeNextCharacter();
+  };
+
+  runTypingCycle();
+}
+
 if (projectList && projectToggle && Array.isArray(window.PROJECTS)) {
   window.PROJECTS.forEach((project) => {
     const link = document.createElement("a");
